@@ -132,6 +132,26 @@
         "name": "Winnemucca"
       },
       {
+        "@type": "City",
+        "name": "Yerington"
+      },
+      {
+        "@type": "Place",
+        "name": "Battle Mountain"
+      },
+      {
+        "@type": "Place",
+        "name": "Eureka"
+      },
+      {
+        "@type": "City",
+        "name": "Ely"
+      },
+      {
+        "@type": "Place",
+        "name": "Hawthorne"
+      },
+      {
         "@type": "State",
         "name": "Nevada"
       }
@@ -504,8 +524,9 @@
     .areas-list li { font-family: Arial, sans-serif; padding: 0.9rem 0; border-bottom: 1px solid var(--border); }
     .areas-list .area-county { display: block; font-family: 'EB Garamond', Georgia, serif; font-size: 1.08rem; color: var(--navy); }
     .areas-list .area-towns { display: block; font-size: 0.85rem; color: var(--muted); line-height: 1.5; margin-top: 0.15rem; }
-    @media (max-width: 900px) { .areas-list { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 560px) { .areas-list { grid-template-columns: 1fr; } }
+    .areas-list .area-rest { grid-column: span 2; }
+    @media (max-width: 900px) { .areas-list { grid-template-columns: 1fr 1fr; } .areas-list .area-rest { grid-column: span 1; } }
+    @media (max-width: 560px) { .areas-list { grid-template-columns: 1fr; } .areas-list .area-rest { grid-column: auto; } }
 
     /* OUR TEAM */
     .our-team { background: var(--light-bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
@@ -1030,11 +1051,16 @@
       <li><span class="area-county">Carson City</span><span class="area-towns">Nevada's state capital</span></li>
       <li><span class="area-county">Douglas County</span><span class="area-towns">Minden, Gardnerville, Stateline, Zephyr Cove</span></li>
       <li><span class="area-county">Storey County</span><span class="area-towns">Virginia City</span></li>
-      <li><span class="area-county">Lyon County</span><span class="area-towns">Fernley</span></li>
+      <li><span class="area-county">Lyon County</span><span class="area-towns">Fernley, Yerington</span></li>
       <li><span class="area-county">Churchill County</span><span class="area-towns">Fallon</span></li>
       <li><span class="area-county">Pershing County</span><span class="area-towns">Lovelock, Black Rock Desert</span></li>
       <li><span class="area-county">Humboldt County</span><span class="area-towns">Winnemucca</span></li>
+      <li><span class="area-county">Lander County</span><span class="area-towns">Battle Mountain</span></li>
+      <li><span class="area-county">Eureka County</span><span class="area-towns">Eureka</span></li>
       <li><span class="area-county">Elko County</span><span class="area-towns">Elko</span></li>
+      <li><span class="area-county">White Pine County</span><span class="area-towns">Ely</span></li>
+      <li><span class="area-county">Mineral County</span><span class="area-towns">Hawthorne</span></li>
+      <li class="area-rest"><span class="area-county">Anywhere else in Nevada</span><span class="area-towns">We handle cases in every Nevada county.</span></li>
     </ul>
   </div>
 </section>
