@@ -498,19 +498,21 @@
     .check-icon { color: #2e8b57; flex-shrink: 0; margin-top: 3px; font-size: 1rem; }
 
     /* AREAS SERVED */
-    .areas { background: #fff; }
-    .areas-intro { font-family: Arial, sans-serif; font-size: 0.95rem; color: var(--text-muted, #4a5568); line-height: 1.7; margin: 1rem 0 1.2rem; max-width: 640px; }
-    .areas-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.6rem 1.6rem; }
-    .areas-list li { font-family: Arial, sans-serif; font-size: 0.9rem; line-height: 1.5; color: #2d3748; padding: 0.6rem 0.8rem; border-left: 3px solid var(--gold); background: var(--light-bg); }
-    .areas-list li strong { display: block; color: var(--navy); font-size: 0.85rem; }
+    .areas { background: #fff; border-top: 1px solid var(--border); }
+    .areas-intro { font-family: Arial, sans-serif; font-size: 0.95rem; color: var(--muted); line-height: 1.7; margin: 0.8rem 0 1.8rem; max-width: 640px; }
+    .areas-list { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 2.4rem; border-top: 1px solid var(--border); }
+    .areas-list li { font-family: Arial, sans-serif; padding: 0.9rem 0; border-bottom: 1px solid var(--border); }
+    .areas-list .area-county { display: block; font-family: 'EB Garamond', Georgia, serif; font-size: 1.08rem; color: var(--navy); }
+    .areas-list .area-towns { display: block; font-size: 0.85rem; color: var(--muted); line-height: 1.5; margin-top: 0.15rem; }
+    @media (max-width: 900px) { .areas-list { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .areas-list { grid-template-columns: 1fr; } }
 
     /* OUR TEAM */
     .our-team { background: var(--light-bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
     .team-grid {
       display: grid;
-      grid-template-columns: minmax(0, 420px);
-      justify-content: center;
+      grid-template-columns: minmax(0, 760px);
       gap: 2rem;
       margin-top: 2rem;
     }
@@ -915,6 +917,15 @@
     /* Accessibility: readable contrast for small text */
     .footer-founder, .footer-disclaimer { color: rgba(255,255,255,0.6) !important; }
     #about .section-label, #faq .section-label, .team-role { color: var(--gold-text) !important; }
+    /* Single attorney card: photo left, details right on desktop */
+    @media (min-width: 769px) {
+      .team-card { display: grid; grid-template-columns: 240px 1fr; align-items: center; text-align: left; padding: 0; }
+      .team-card picture { height: 100%; display: flex; align-items: center; justify-content: center; padding: 2rem; }
+      .team-card .team-role { margin-top: 0; }
+      .team-card .team-role, .team-card .team-name, .team-card .team-cred { padding: 0; margin-left: 2.4rem; margin-right: 2rem; }
+      .team-card .team-link { margin-left: 2.4rem; }
+      .team-card .team-body { padding: 2rem 0; }
+    }
   </style>
 </head>
 <body>
@@ -996,10 +1007,12 @@
           <source srcset="images/kenneth-stover-nevada-record-sealing-attorney.webp" type="image/webp">
           <img class="team-photo" src="images/kenneth-stover-nevada-record-sealing-attorney.jpg" alt="Kenneth A. Stover, Nevada record sealing attorney" width="160" height="160" loading="lazy" decoding="async">
         </picture>
+        <div class="team-body">
         <p class="team-role">Founder &amp; Director</p>
         <p class="team-name">Kenneth A. Stover, Esq.</p>
         <p class="team-cred">30 years of Nevada criminal defense · Former Deputy District Attorney</p>
         <a href="kenneth-a-stover" class="team-link">Full Bio →</a>
+        </div>
       </div>
     </div>
   </div>
@@ -1011,18 +1024,17 @@
     <p class="section-label">Areas We Serve</p>
     <h2>Record Sealing in Reno and Northern Nevada</h2>
     <p style="color:#1e7d32; font-style:italic; font-family:Arial,sans-serif; font-size:0.85rem; margin:0 0 0.6rem;">AI Answer — Attorney Stover should revise</p>
-    <p class="areas-intro">We help people seal records from cases in Reno, Sparks and communities across Northern Nevada, including:</p>
+    <p class="areas-intro">We help people seal records from cases in Reno, Sparks and communities across Northern Nevada, including Lake Tahoe:</p>
     <ul class="areas-list">
-      <li><strong>Washoe County</strong> Reno, Sparks, Incline Village, Crystal Bay</li>
-      <li><strong>Lake Tahoe (Douglas County)</strong> Stateline, Zephyr Cove</li>
-      <li><strong>Carson City</strong></li>
-      <li><strong>Douglas County</strong> Minden, Gardnerville</li>
-      <li><strong>Storey County</strong> Virginia City</li>
-      <li><strong>Lyon County</strong> Fernley</li>
-      <li><strong>Churchill County</strong> Fallon</li>
-      <li><strong>Pershing County</strong> Lovelock, Black Rock Desert</li>
-      <li><strong>Humboldt County</strong> Winnemucca</li>
-      <li><strong>Elko County</strong> Elko</li>
+      <li><span class="area-county">Washoe County</span><span class="area-towns">Reno, Sparks, Incline Village, Crystal Bay</span></li>
+      <li><span class="area-county">Carson City</span><span class="area-towns">Nevada's state capital</span></li>
+      <li><span class="area-county">Douglas County</span><span class="area-towns">Minden, Gardnerville, Stateline, Zephyr Cove</span></li>
+      <li><span class="area-county">Storey County</span><span class="area-towns">Virginia City</span></li>
+      <li><span class="area-county">Lyon County</span><span class="area-towns">Fernley</span></li>
+      <li><span class="area-county">Churchill County</span><span class="area-towns">Fallon</span></li>
+      <li><span class="area-county">Pershing County</span><span class="area-towns">Lovelock, Black Rock Desert</span></li>
+      <li><span class="area-county">Humboldt County</span><span class="area-towns">Winnemucca</span></li>
+      <li><span class="area-county">Elko County</span><span class="area-towns">Elko</span></li>
     </ul>
   </div>
 </section>
