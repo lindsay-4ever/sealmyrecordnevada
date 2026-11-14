@@ -3,26 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Security: only this site's own files may load, and the form may only send data to our Supabase project.
+       Google Tag Manager, Google Analytics, Google Ads and the Meta Pixel are also allowed (domains from Google's CSP guide plus Meta's two).
+       They may receive page views and the detail-free "form_started" and "lead_submitted" events only, never form answers. Add no other domains. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://tagmanager.google.com https://www.googleadservices.com https://www.google.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://tagmanager.google.com https://fonts.googleapis.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.google.com https://*.g.doubleclick.net https://www.googleadservices.com https://pagead2.googlesyndication.com https://ssl.gstatic.com https://www.gstatic.com https://www.facebook.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' https://ubtmdxknrhdeqtixhyri.supabase.co https://www.googletagmanager.com https://*.google-analytics.com https://*.google.com https://*.g.doubleclick.net https://ad.doubleclick.net https://www.googleadservices.com https://pagead2.googlesyndication.com https://www.facebook.com https://connect.facebook.net; object-src 'none'; base-uri 'self'; form-action 'none'; frame-src https://www.googletagmanager.com; manifest-src 'self'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <script>if (window.top !== window.self) { document.documentElement.style.display = 'none'; try { window.top.location = window.self.location.href; } catch (e) {} }</script>
 
-  <title>Nevada Record Sealing Pricing | Nevada Sealing Records | Kenneth A. Stover</title>
-  <meta name="description" content="Learn about the cost of sealing your Nevada criminal record. Flexible payment plans available. Attorney Kenneth A. Stover, serving Reno, Sparks, and Northern Nevada." />
+  <title>Reno & Nevada Record Sealing Cost | Nevada Sealing Records</title>
+  <script src="/js/gtm.js"></script>
+  <script src="/js/lead-source.js"></script>
+  <meta name="description" content="What does it cost to seal a record in Nevada? Petitions are generally $2,000 for a misdemeanor and $4,000 for a felony. See what's included." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.nevadasealingrecords.com/pricing.html" />
+  <link rel="canonical" href="https://nevadasealingrecords.com/pricing" />
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0d2b4e">
+  <link rel="preload" href="fonts/eb-garamond-500.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Nevada Record Sealing Pricing | Nevada Sealing Records" />
-  <meta property="og:description" content="Learn about the cost of sealing your Nevada criminal record. Flexible payment plans available." />
-  <meta property="og:url" content="https://www.nevadasealingrecords.com/pricing.html" />
+  <meta property="og:title" content="Reno & Nevada Record Sealing Cost | Nevada Sealing Records" />
+  <meta property="og:description" content="What does it cost to seal a record in Nevada? Petitions are generally $2,000 for a misdemeanor and $4,000 for a felony. See what's included." />
+  <meta property="og:url" content="https://nevadasealingrecords.com/pricing" />
   <meta property="og:site_name" content="Nevada Sealing Records" />
+  <meta property="og:image" content="https://nevadasealingrecords.com/images/nevada-sealing-records-share.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Nevada Sealing Records — Seal your Nevada criminal record. Start fresh." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://nevadasealingrecords.com/images/nevada-sealing-records-share.jpg" />
 
   <style>
+    @font-face { font-family: 'EB Garamond'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonts/eb-garamond-500.woff2') format('woff2'); }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
       --navy: #0d2b4e;
       --gold: #c9a84c;
       --gold-light: #e8c96a;
+      --gold-text: #86691f;   /* deeper gold for small text on light backgrounds (WCAG AA) */
       --light-bg: #f7f8fa;
       --text: #1a1a2e;
       --muted: #5a6470;
@@ -59,22 +81,26 @@
       font-weight: bold;
       letter-spacing: 0.02em;
       text-decoration: none;
+      white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
-      gap: 2rem;
+      align-items: center;
+      gap: 1.6rem;
       list-style: none;
     }
+    .nav-links li:last-child { margin-left: 0.4rem; }
 
     .nav-links a {
       color: #ccd6e0;
       text-decoration: none;
       font-family: 'Arial', sans-serif;
-      font-size: 0.88rem;
-      letter-spacing: 0.04em;
+      font-size: 0.82rem;
+      letter-spacing: 0.03em;
       text-transform: uppercase;
       transition: color 0.2s;
+      white-space: nowrap;
     }
 
     .nav-links a:hover { color: var(--gold); }
@@ -82,13 +108,21 @@
     .nav-cta {
       background: var(--gold);
       color: var(--navy) !important;
-      padding: 0.45rem 1.1rem;
+      padding: 0.45rem 1rem;
       border-radius: 4px;
       font-weight: bold !important;
       transition: background 0.2s !important;
+      white-space: nowrap;
     }
 
     .nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
+
+    /* HAMBURGER */
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; z-index: 101; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--gold); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
     /* PAGE HEADER */
     .page-header {
@@ -155,6 +189,14 @@
       color: var(--muted);
       margin-bottom: 1.5rem;
     }
+
+    .fee-rows { border: 1px solid var(--border); border-radius: 8px; margin: 0 0 1.25rem; overflow: hidden; }
+    .fee-row { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.85rem 1.1rem; font-family: 'Arial', sans-serif; }
+    .fee-row + .fee-row { border-top: 1px solid var(--border); }
+    .fee-label { color: var(--navy); font-weight: bold; font-size: 0.95rem; }
+    .fee-amount { color: var(--navy); font-family: 'Georgia', serif; font-size: 1.2rem; white-space: nowrap; }
+    @media (max-width: 520px) { .fee-row { flex-direction: column; gap: 0.15rem; } .fee-amount { white-space: normal; } }
+    .fee-row-muted .fee-label, .fee-row-muted .fee-amount { color: var(--muted); font-weight: normal; font-size: 0.9rem; font-family: 'Arial', sans-serif; }
 
     .pricing-placeholder {
       font-family: 'Arial', sans-serif;
@@ -268,36 +310,173 @@
     .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
 
     /* FOOTER */
-    footer {
-      background: #070f1a;
-      color: rgba(255,255,255,0.4);
-      text-align: center;
-      padding: 2rem 5%;
-      font-family: 'Arial', sans-serif;
-      font-size: 0.8rem;
+    footer { background: #070f1a; }
+
+    .footer-main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 64px 5% 56px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
     }
 
-    footer a { color: var(--gold); text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
+    .footer-brand-name {
+      font-family: 'EB Garamond', 'Georgia', serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--gold);
+      letter-spacing: 0.01em;
+      margin-bottom: 0.4rem;
+      line-height: 1.3;
+    }
+
+    .footer-founder {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.04em;
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand p {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.7;
+      max-width: 300px;
+      margin-bottom: 1.4rem;
+    }
+
+    .footer-areas { font-family: Arial, sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.7); margin: 0.4rem 0 0.8rem; max-width: 300px; line-height: 1.6; }
+    .footer-contact { display: flex; flex-direction: column; gap: 0.5rem; }
+
+    .footer-contact a.footer-phone { flex-wrap: wrap; row-gap: 2px; }
+    .footer-contact .phone-digits { flex-basis: 100%; font-size: 0.75rem; opacity: 0.7; padding-left: 1.35em; }
+
+    .footer-contact a {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.88);
+      text-decoration: none;
+      transition: color 0.18s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .footer-contact a:hover { color: var(--gold); }
+
+    .footer-col-label {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.1rem;
+      opacity: 0.85;
+    }
+
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+
+    .footer-links a {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.84rem;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      transition: color 0.18s;
+      line-height: 1.4;
+    }
+
+    .footer-links a:hover { color: rgba(255,255,255,0.88); }
+
+    .footer-links a.footer-cta {
+      color: var(--gold);
+      font-weight: bold;
+      font-size: 0.82rem;
+      letter-spacing: 0.02em;
+      margin-top: 0.3rem;
+    }
+
+    .footer-links a.footer-cta:hover { color: var(--gold-light); }
+
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.09); }
+
+    .footer-bottom-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-copyright {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.76rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.5;
+    }
+
+    .footer-social a {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.76rem;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.18s;
+    }
+
+    .footer-social a:hover { color: var(--gold); }
+
+    .footer-disclaimer {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 5% 20px;
+      font-family: 'Arial', sans-serif;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.25);
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    @media (max-width: 620px) {
+      .footer-main { grid-template-columns: 1fr; padding: 48px 6% 40px; gap: 2rem; }
+      .footer-brand p { max-width: none; }
+      .footer-bottom-inner { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    }
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
       nav { padding: 0 4%; }
-      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-links { display: none; position: fixed; top: 68px; left: 0; right: 0; background: var(--navy); flex-direction: column; padding: 0.5rem 5% 1.5rem; gap: 0; border-top: 1px solid rgba(255,255,255,0.1); box-shadow: 0 4px 16px rgba(0,0,0,0.3); z-index: 99; }
+      .nav-links.open { display: flex; }
+      .nav-links li { border-bottom: 1px solid rgba(255,255,255,0.07); }
+      .nav-links a { padding: 0.9rem 0; display: block; font-size: 0.95rem; }
+      .nav-cta { margin: 1rem 0 0.3rem; text-align: center; display: block; padding: 0.8rem 1rem !important; border-radius: 5px !important; }
     }
+  
+    /* Accessibility: readable contrast for small text */
+    .footer-founder, .footer-disclaimer { color: rgba(255,255,255,0.6) !important; }
   </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <a href="index.html" class="nav-logo">Nevada Sealing Records</a>
+  <a href="/" class="nav-logo">Nevada Sealing Records</a>
+  <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
   <ul class="nav-links">
-    <li><a href="index.html#how-it-works">How It Works</a></li>
-    <li><a href="index.html#about">Attorney</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="pricing.html">Pricing</a></li>
-    <li><a href="https://docs.google.com/forms/d/1RPdbAnX9T3gs5yUmTrP7pzwJYavxoHywpOngafWstDQ/viewform" target="_blank" rel="noopener" class="nav-cta">Check Your Eligibility for Free</a></li>
+    <li><a href="kenneth-a-stover">Ken Stover</a></li>
+    <li><a href="faq">FAQ</a></li>
+    <li><a href="pricing">Pricing</a></li>
+    <li><a href="eligibility" class="nav-cta">Check Your Eligibility for Free</a></li>
   </ul>
 </nav>
 
@@ -313,22 +492,23 @@
   <div class="pricing-inner">
 
     <div class="pricing-card">
-      <h2>Record Sealing — Flat Fee</h2>
-      <p class="price-note">Price depends on the complexity of your case and the number of records to be sealed.</p>
-
-      <div class="pricing-placeholder">
-        <strong>AI Answer — Attorney Stover &amp; team needs to revise.</strong> Lindsay recommends leading with a starting price (e.g. "Record sealing starts at $[amount]") so visitors know what to expect, followed by a note that flexible payment plans are available. End with the link below. Remove this note once Ken has filled in the answer.<br><br><a href="https://docs.google.com/forms/d/e/1FAIpQLSf_yqI7UKzdTpxzrADOgNutMs4DZNOLq00hpJLvUc976NwBHw/viewform" target="_blank" rel="noopener">Check Your Eligibility for Free →</a>
+      <h2>Record Sealing Fees</h2>
+      <p class="price-note">Fees are charged per Petition to Seal. Each Petition is generally:</p>
+      <div class="fee-rows">
+        <div class="fee-row"><span class="fee-label">Misdemeanor</span><span class="fee-amount">$2,000</span></div>
+        <div class="fee-row"><span class="fee-label">Felony</span><span class="fee-amount">$4,000</span></div>
       </div>
+      <p class="price-note">Our fees are dependent on each record. In some instances, there are multiple charges that can be resolved in one court with one petition, and in other instances, multiple charges will require multiple petitions. Some courts also require appearances of Counsel and others do not.</p>
 
-      <div class="what-included">
+<div class="what-included">
         <h3>What's included:</h3>
         <ul class="included-list">
-          <li><span class="check-icon">✓</span> Full eligibility review of your criminal history</li>
-          <li><span class="check-icon">✓</span> Obtaining certified records from Nevada courts and agencies</li>
+          <li><span class="check-icon">✓</span> Free legal consultation upon receipt of your State criminal history</li>
           <li><span class="check-icon">✓</span> Preparation and filing of all legal documents</li>
-          <li><span class="check-icon">✓</span> Court appearances handled by Attorney Stover</li>
-          <li><span class="check-icon">✓</span> Notification to all relevant state agencies after approval</li>
-          <li><span class="check-icon">✓</span> Certified copies of the sealing order</li>
+          <li><span class="check-icon">✓</span> Court appearances handled by your attorney</li>
+          <li><span class="check-icon">✓</span> Certified copies of the Order Sealing Record disseminated to all agencies involved in your arrest</li>
+          <li><span class="check-icon">✓</span> Ongoing monitoring of compliance with the sealing order</li>
+          <li><span class="check-icon">✓</span> Notification when your record has been removed from state and federal databases</li>
         </ul>
       </div>
     </div>
@@ -336,33 +516,60 @@
   </div>
 </section>
 
-<!-- PAYMENT PLANS -->
-<section class="payment-section">
-  <div class="payment-inner">
-    <p class="section-label">Flexible Options</p>
-    <h2>Payment Plans Available</h2>
-    <p>We understand that legal fees can feel like one more barrier when you're already trying to move forward. That's why we offer flexible payment plan options — so cost doesn't stand between you and a clean record.</p>
-    <p><em style="color:#b00; font-style:italic;">Attorney needs to answer — specific payment plan details (e.g. deposit required, monthly installments, financing options). We can remove this at any time if we do not want to add this.</em></p>
-  </div>
-</section>
-
 <!-- CTA -->
 <div class="cta-banner">
   <h2>Get Your Personalized Quote</h2>
-  <p>Fill out the form to see if you qualify and we'll get back to you within 1 business day with a clear, no-surprise quote.</p>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_yqI7UKzdTpxzrADOgNutMs4DZNOLq00hpJLvUc976NwBHw/viewform" target="_blank" rel="noopener" class="btn-primary">Fill Out the Free Qualification Form →</a>
+  <p>Fill out the form to see if you qualify and we'll reach out with a clear, no-surprise quote.</p>
+  <a href="eligibility" class="btn-primary">Fill Out the Free Qualification Form →</a>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <p style="margin-bottom:0.5rem;">
-    © 2026 Law Offices of Kenneth A. Stover &nbsp;|&nbsp;
-    <a href="https://www.kenstoverlaw.com" target="_blank">kenstoverlaw.com</a> &nbsp;|&nbsp;
-    (775) 502-1575 &nbsp;|&nbsp;
-    300 S Arlington Ave, Ste. B, Reno, NV 89501
-  </p>
-  <p>Member, State Bar of Nevada &nbsp;·&nbsp; Washoe County Bar Association</p>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <div class="footer-brand-name">Nevada Sealing Records</div>
+      <div class="footer-founder">Founded by Kenneth A. Stover</div>
+      <p class="footer-areas">Serving Reno, Sparks, Lake Tahoe, Carson City and all of Northern Nevada.</p>
+      <p>We handle Nevada record sealing so old charges stop costing you opportunities.</p>
+      <div class="footer-contact">
+        <a class="footer-phone" href="tel:+17753254554">☎ (775) 325-4554</a>
+        <a href="mailto:clarissa@kenstoverlaw.com">✉ clarissa@kenstoverlaw.com</a>
+      </div>
+    </div>
+    <div>
+      <p class="footer-col-label">Navigate</p>
+      <ul class="footer-links">
+            <li><a href="faq">FAQ</a></li>
+        <li><a href="pricing">Pricing</a></li>
+        <li><a href="kenneth-a-stover">About Ken Stover</a></li>
+        <li><a href="privacy">Privacy Policy</a></li>
+        <li><a href="eligibility" class="footer-cta">Check Eligibility →</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <p class="footer-copyright">© 2026 Nevada Sealing Records. All rights reserved.</p>
+    </div>
+    <p class="footer-disclaimer">The information on this website is for general informational purposes only and does not constitute legal advice. Submitting a form or sending an email does not create an attorney-client relationship. Results vary based on individual circumstances.</p>
+  </div>
 </footer>
 
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  hamburger.addEventListener('click', function() {
+    const open = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+    });
+  });
+</script>
 </body>
 </html>

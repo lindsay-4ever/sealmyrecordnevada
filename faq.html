@@ -3,26 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Security: only this site's own files may load, and the form may only send data to our Supabase project.
+       Google Tag Manager, Google Analytics, Google Ads and the Meta Pixel are also allowed (domains from Google's CSP guide plus Meta's two).
+       They may receive page views and the detail-free "form_started" and "lead_submitted" events only, never form answers. Add no other domains. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://tagmanager.google.com https://www.googleadservices.com https://www.google.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://tagmanager.google.com https://fonts.googleapis.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.google.com https://*.g.doubleclick.net https://www.googleadservices.com https://pagead2.googlesyndication.com https://ssl.gstatic.com https://www.gstatic.com https://www.facebook.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' https://ubtmdxknrhdeqtixhyri.supabase.co https://www.googletagmanager.com https://*.google-analytics.com https://*.google.com https://*.g.doubleclick.net https://ad.doubleclick.net https://www.googleadservices.com https://pagead2.googlesyndication.com https://www.facebook.com https://connect.facebook.net; object-src 'none'; base-uri 'self'; form-action 'none'; frame-src https://www.googletagmanager.com; manifest-src 'self'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <script>if (window.top !== window.self) { document.documentElement.style.display = 'none'; try { window.top.location = window.self.location.href; } catch (e) {} }</script>
 
-  <title>Nevada Record Sealing FAQ | Nevada Sealing Records | Kenneth A. Stover</title>
-  <meta name="description" content="Answers to the most common questions about sealing your Nevada criminal record — waiting periods, eligibility, cost, and more. Attorney Kenneth A. Stover, serving Northern Nevada." />
+  <title>Reno & Nevada Record Sealing FAQ: Waiting Periods & Costs</title>
+  <script src="/js/gtm.js"></script>
+  <script src="/js/lead-source.js"></script>
+  <meta name="description" content="Answers to common Nevada record sealing questions: waiting periods, which charges can be sealed, costs, court appearances, gun rights, and more." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.nevadasealingrecords.com/faq.html" />
+  <link rel="canonical" href="https://nevadasealingrecords.com/faq" />
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0d2b4e">
+  <link rel="preload" href="fonts/eb-garamond-500.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Nevada Record Sealing FAQ | Nevada Sealing Records" />
-  <meta property="og:description" content="Answers to the most common questions about sealing your Nevada criminal record. Attorney Kenneth A. Stover, serving Northern Nevada." />
-  <meta property="og:url" content="https://www.nevadasealingrecords.com/faq.html" />
+  <meta property="og:title" content="Nevada Record Sealing FAQ: Waiting Periods & Costs" />
+  <meta property="og:description" content="Answers to common Nevada record sealing questions: waiting periods, which charges can be sealed, costs, court appearances, gun rights, and more." />
+  <meta property="og:url" content="https://nevadasealingrecords.com/faq" />
   <meta property="og:site_name" content="Nevada Sealing Records" />
+  <meta property="og:image" content="https://nevadasealingrecords.com/images/nevada-sealing-records-share.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Nevada Sealing Records — Seal your Nevada criminal record. Start fresh." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://nevadasealingrecords.com/images/nevada-sealing-records-share.jpg" />
 
   <style>
+    @font-face { font-family: 'EB Garamond'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonts/eb-garamond-500.woff2') format('woff2'); }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
       --navy: #0d2b4e;
       --gold: #c9a84c;
       --gold-light: #e8c96a;
+      --gold-text: #86691f;   /* deeper gold for small text on light backgrounds (WCAG AA) */
       --light-bg: #f7f8fa;
       --text: #1a1a2e;
       --muted: #5a6470;
@@ -59,22 +81,26 @@
       font-weight: bold;
       letter-spacing: 0.02em;
       text-decoration: none;
+      white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
-      gap: 2rem;
+      align-items: center;
+      gap: 1.6rem;
       list-style: none;
     }
+    .nav-links li:last-child { margin-left: 0.4rem; }
 
     .nav-links a {
       color: #ccd6e0;
       text-decoration: none;
       font-family: 'Arial', sans-serif;
-      font-size: 0.88rem;
-      letter-spacing: 0.04em;
+      font-size: 0.82rem;
+      letter-spacing: 0.03em;
       text-transform: uppercase;
       transition: color 0.2s;
+      white-space: nowrap;
     }
 
     .nav-links a:hover { color: var(--gold); }
@@ -82,13 +108,21 @@
     .nav-cta {
       background: var(--gold);
       color: var(--navy) !important;
-      padding: 0.45rem 1.1rem;
+      padding: 0.45rem 1rem;
       border-radius: 4px;
       font-weight: bold !important;
       transition: background 0.2s !important;
+      white-space: nowrap;
     }
 
     .nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
+
+    /* HAMBURGER */
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; z-index: 101; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--gold); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
     /* PAGE HEADER */
     .page-header {
@@ -156,6 +190,8 @@
       margin-bottom: 0.6rem;
     }
 
+    .faq-item p + p { margin-top: 0.75rem; }
+
     .faq-item p {
       font-family: 'Arial', sans-serif;
       font-size: 0.92rem;
@@ -201,101 +237,371 @@
     .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
 
     /* FOOTER */
-    footer {
-      background: #070f1a;
-      color: rgba(255,255,255,0.4);
-      text-align: center;
-      padding: 2rem 5%;
-      font-family: 'Arial', sans-serif;
-      font-size: 0.8rem;
+    footer { background: #070f1a; }
+
+    .footer-main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 64px 5% 56px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
     }
 
-    footer a { color: var(--gold); text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
+    .footer-brand-name {
+      font-family: 'EB Garamond', 'Georgia', serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--gold);
+      letter-spacing: 0.01em;
+      margin-bottom: 0.4rem;
+      line-height: 1.3;
+    }
+
+    .footer-founder {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.04em;
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand p {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.7;
+      max-width: 300px;
+      margin-bottom: 1.4rem;
+    }
+
+    .footer-areas { font-family: Arial, sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.7); margin: 0.4rem 0 0.8rem; max-width: 300px; line-height: 1.6; }
+    .footer-contact { display: flex; flex-direction: column; gap: 0.5rem; }
+
+    .footer-contact a.footer-phone { flex-wrap: wrap; row-gap: 2px; }
+    .footer-contact .phone-digits { flex-basis: 100%; font-size: 0.75rem; opacity: 0.7; padding-left: 1.35em; }
+
+    .footer-contact a {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.88);
+      text-decoration: none;
+      transition: color 0.18s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .footer-contact a:hover { color: var(--gold); }
+
+    .footer-col-label {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.1rem;
+      opacity: 0.85;
+    }
+
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+
+    .footer-links a {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.84rem;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      transition: color 0.18s;
+      line-height: 1.4;
+    }
+
+    .footer-links a:hover { color: rgba(255,255,255,0.88); }
+
+    .footer-links a.footer-cta {
+      color: var(--gold);
+      font-weight: bold;
+      font-size: 0.82rem;
+      letter-spacing: 0.02em;
+      margin-top: 0.3rem;
+    }
+
+    .footer-links a.footer-cta:hover { color: var(--gold-light); }
+
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.09); }
+
+    .footer-bottom-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-copyright {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.76rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.5;
+    }
+
+    .footer-social a {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.76rem;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.18s;
+    }
+
+    .footer-social a:hover { color: var(--gold); }
+
+    .footer-disclaimer {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 5% 20px;
+      font-family: 'Arial', sans-serif;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.25);
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    @media (max-width: 620px) {
+      .footer-main { grid-template-columns: 1fr; padding: 48px 6% 40px; gap: 2rem; }
+      .footer-brand p { max-width: none; }
+      .footer-bottom-inner { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    }
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
       nav { padding: 0 4%; }
-      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-links { display: none; position: fixed; top: 68px; left: 0; right: 0; background: var(--navy); flex-direction: column; padding: 0.5rem 5% 1.5rem; gap: 0; border-top: 1px solid rgba(255,255,255,0.1); box-shadow: 0 4px 16px rgba(0,0,0,0.3); z-index: 99; }
+      .nav-links.open { display: flex; }
+      .nav-links li { border-bottom: 1px solid rgba(255,255,255,0.07); }
+      .nav-links a { padding: 0.9rem 0; display: block; font-size: 0.95rem; }
+      .nav-cta { margin: 1rem 0 0.3rem; text-align: center; display: block; padding: 0.8rem 1rem !important; border-radius: 5px !important; }
     }
+  
+    /* Accessibility: readable contrast for small text */
+    .footer-founder, .footer-disclaimer { color: rgba(255,255,255,0.6) !important; }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does the record sealing process take in Nevada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "From the time the Petition to Seal your record is filed to the receipt of a compliance letter from the Federal Bureau of Investigations, the process usually takes six to twelve months. In some cases, compliance has taken longer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long do I have to wait to file a Petition?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If your case is dismissed with prejudice, or if you were acquitted, there is no waiting period. If your case was never filed or was dismissed without prejudice, you must wait until the statute of limitations has expired — one year for misdemeanors, typically three years for felonies. If you were convicted, the waiting period depends on the charge. Use our free eligibility check to find your specific waiting period — whether your case was dismissed, never filed, or ended in a conviction."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What charges cannot be sealed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If there are no convictions, all charges can be sealed. However, a Petition to Seal Records cannot be granted if you were convicted of: felony DUI, a felony sex offense, Home Invasion with the Use of a Deadly Weapon, Kidnapping of a Child, Sex Trafficking of a Child, or First Degree Murder with intent to commit Sexual Assault. Fill out the form for a free eligibility check on your specific record."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between expungement and record sealing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An expunged record is destroyed — it no longer exists. A sealed record still exists, but access to it is limited to certain agencies. Nevada does not have expungement, but a sealed record is removed from your state and federal criminal history, and the court's order permits you to say that you have never been arrested or convicted of any crime."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will sealing my record restore my gun rights?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you have a conviction for any felony offense or a conviction for misdemeanor Domestic Battery, sealing your record will not restore your right to bear arms. However, if your arrest was for a felony and you were convicted of only a misdemeanor, or, if you were arrested for domestic battery and convicted of something less, your ability to purchase a firearm may be challenged. The arrest itself, even if the charges were dismissed, can preclude you from purchasing a firearm. If you fail a background check, your ability to purchase any firearm may be permanently impaired. To prevent this problem you MUST SEAL your arrest record before attempting to purchase a firearm. If you want your right to bear firearms restored after a felony conviction or a misdemeanor conviction for domestic battery, you will need to seek a Pardon. A sealed conviction will not restore your gun rights."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can my attorney obtain my criminal history for me?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No — lawyers cannot request your State criminal history record on your behalf. You must obtain it yourself. To file a Petition to Seal Records, the court requires a current, verified copy of your State criminal history attached to the Petition. If our eligibility review indicates you may qualify, our office will send you a Sealing Record Packet that walks you through exactly how to get both your State and Federal criminal records — including the fingerprints, money orders, and applications required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens after I submit my criminal history records?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Upon receipt of your State criminal history record, our office will provide a free legal consultation to determine exactly how to proceed. Once the legal fee is agreed upon, counsel will file the Petition in the appropriate court and represent you at all court appearances. After the court grants the Petition, we prepare the Order Sealing Record, disseminate certified copies to all agencies involved in your arrest, and monitor compliance until your record has been removed from state and federal databases."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I have to appear in court?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In most cases your presence is not required — counsel represents you at all court appearances. Some jurisdictions do require the petitioner to be present at the hearing. We'll let you know in advance whether your attendance is needed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will my record be completely invisible after sealing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sealed records are hidden from the general public, most employers, and landlords. Certain government agencies and law enforcement can still access them in limited circumstances. We'll explain exactly what sealing means for your specific situation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I say I have no criminal record after sealing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In most cases, yes — Nevada law allows you to answer \"no\" on job applications and housing forms that ask about criminal history, once your record is sealed. There are limited exceptions, such as applications for certain government jobs or professional licenses. We'll walk you through exactly what you can and cannot say."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will my employer find out I'm sealing my record?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The process is confidential. Your employer is not notified, and once the record is sealed, it will not appear on standard background checks employers use."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Nevada have expungement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nevada does not have expungement, but record sealing achieves a very similar result. Your record is hidden from public view, most employers, and landlords — giving you a genuine fresh start. If you've been searching for \"Nevada expungement,\" record sealing is what you're looking for."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I seal my record if I have cases in multiple Nevada counties?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We handle cases across all Nevada counties. Having records in multiple counties — including both Washoe County and other Nevada counties — adds some complexity but is very manageable. We coordinate everything on your behalf."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does record sealing cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our fees are dependent on each record. In some instances, there are multiple charges that can be resolved in one court with one petition, and in other instances, multiple charges will require multiple petitions. Some courts also require appearances of Counsel and others do not. Each Petition is generally $2,000 for a misdemeanor and $4,000 for felonies. The only other fees would be the filing fee for the Petition."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <a href="index.html" class="nav-logo">Nevada Sealing Records</a>
+  <a href="/" class="nav-logo">Nevada Sealing Records</a>
+  <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
   <ul class="nav-links">
-    <li><a href="index.html#how-it-works">How It Works</a></li>
-    <li><a href="index.html#about">Attorney</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="index.html#pricing">Pricing</a></li>
-    <li><a href="https://docs.google.com/forms/d/1RPdbAnX9T3gs5yUmTrP7pzwJYavxoHywpOngafWstDQ/viewform" target="_blank" rel="noopener" class="nav-cta">Check Your Eligibility for Free</a></li>
+    <li><a href="kenneth-a-stover">Ken Stover</a></li>
+    <li><a href="faq">FAQ</a></li>
+    <li><a href="pricing">Pricing</a></li>
+    <li><a href="eligibility" class="nav-cta">Check Your Eligibility for Free</a></li>
   </ul>
 </nav>
 
 <!-- PAGE HEADER -->
 <div class="page-header">
   <p class="section-label">Common Questions</p>
-  <h1>Frequently Asked Questions</h1>
-  <p>Everything you need to know about sealing your Nevada criminal record — answered by attorney Kenneth A. Stover.</p>
+  <h1>Nevada Record Sealing — Frequently Asked Questions</h1>
+  <p>Everything you need to know about sealing your Nevada criminal record.</p>
 </div>
 
 <!-- FAQ -->
 <section class="faq">
   <div class="faq-inner">
 
-    <div class="faq-item">
+    <div class="faq-item" id="how-long-does-the-record-sealing-process-take-in-nevada">
       <h3>How long does the record sealing process take in Nevada?</h3>
-      <p>It depends on the offense. Dismissed charges or acquittals typically take 3–6 months. Misdemeanors usually take 6–12 months. Felony cases can take longer depending on complexity. We keep you informed every step of the way.</p>
+      <p>From the time the Petition to Seal your record is filed to the receipt of a compliance letter from the Federal Bureau of Investigations, the process usually takes six to twelve months. In some cases, compliance has taken longer.</p>
     </div>
-    <div class="faq-item">
-      <h3>What are the waiting periods before I can apply?</h3>
-      <p>After completing all sentence requirements (probation, fines, restitution), Nevada requires: <strong>immediately</strong> for dismissed charges or acquittals; <strong>1 year</strong> for most misdemeanors; <strong>2 years</strong> for gross misdemeanors and Category E felonies; <strong>5 years</strong> for Category B, C, and D felonies; <strong>7 years</strong> for misdemeanor DUI and domestic battery; and <strong>10 years</strong> for Category A felonies.</p>
+    <div class="faq-item" id="how-long-do-i-have-to-wait-to-file-a-petition">
+      <h3>How long do I have to wait to file a Petition?</h3>
+      <p>If your case is dismissed with prejudice, or if you were acquitted, there is no waiting period. If your case was never filed or was dismissed without prejudice, you must wait until the statute of limitations has expired — one year for misdemeanors, typically three years for felonies.</p>
+      <p style="margin-top:0.6rem;">If you were convicted, the waiting period depends on the charge. <a href="eligibility">Use our free eligibility check</a> to find your specific waiting period — whether your case was dismissed, never filed, or ended in a conviction.</p>
     </div>
-    <div class="faq-item">
-      <h3>Are there records that can never be sealed?</h3>
-      <p>Yes. Felony sexual offenses, felony DUI cases, serious violent crimes, and crimes against children cannot be sealed under Nevada law. Most other offenses — including misdemeanors, non-violent felonies, and dismissed charges — are eligible. <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_yqI7UKzdTpxzrADOgNutMs4DZNOLq00hpJLvUc976NwBHw/viewform" target="_blank" rel="noopener">Fill out the form</a> for a free eligibility check on your specific record.</p>
+    <div class="faq-item" id="what-charges-cannot-be-sealed">
+      <h3>What charges cannot be sealed?</h3>
+      <p>If there are no convictions, all charges can be sealed. However, a Petition to Seal Records cannot be granted if you were convicted of: felony DUI, a felony sex offense, Home Invasion with the Use of a Deadly Weapon, Kidnapping of a Child, Sex Trafficking of a Child, or First Degree Murder with intent to commit Sexual Assault. <a href="eligibility">Fill out the form</a> for a free eligibility check on your specific record.</p>
     </div>
-    <div class="faq-item">
-      <h3>What's the difference between record sealing and expungement?</h3>
-      <p>Nevada doesn't have expungement — it has record sealing, which achieves a very similar result. A sealed record is hidden from public view and most background checks, effectively giving you a clean slate for employment and housing purposes.</p>
+    <div class="faq-item" id="whats-the-difference-between-expungement-and-record-sealing">
+      <h3>What's the difference between expungement and record sealing?</h3>
+      <p>An expunged record is destroyed — it no longer exists. A sealed record still exists, but access to it is limited to certain agencies. Nevada does not have expungement, but a sealed record is removed from your state and federal criminal history, and the court's order permits you to say that you have never been arrested or convicted of any crime.</p>
     </div>
-    <div class="faq-item">
-      <h3>Do I have to go to court?</h3>
-      <p>A hearing may be required in some cases, but Attorney Stover handles all filings and court appearances on your behalf. We manage the entire process — from obtaining your criminal history from the Nevada Department of Public Safety to notifying all relevant agencies after the order is granted.</p>
+    <div class="faq-item" id="will-sealing-my-record-restore-my-gun-rights">
+      <h3>Will sealing my record restore my gun rights?</h3>
+      <p>If you have a conviction for any felony offense or a conviction for misdemeanor Domestic Battery, sealing your record will not restore your right to bear arms. However, if your arrest was for a felony and you were convicted of only a misdemeanor, or, if you were arrested for domestic battery and convicted of something less, your ability to purchase a firearm may be challenged. The arrest itself, even if the charges were dismissed, can preclude you from purchasing a firearm. If you fail a background check, your ability to purchase any firearm may be permanently impaired. To prevent this problem you <strong>MUST SEAL</strong> your arrest record before attempting to purchase a firearm.</p>
+      <p>If you want your right to bear firearms restored after a felony conviction or a misdemeanor conviction for domestic battery, you will need to seek a Pardon. A sealed conviction will not restore your gun rights.</p>
     </div>
-    <div class="faq-item">
+    <div class="faq-item" id="can-my-attorney-obtain-my-criminal-history-for-me">
+      <h3>Can my attorney obtain my criminal history for me?</h3>
+      <p>No — lawyers cannot request your State criminal history record on your behalf. You must obtain it yourself. To file a Petition to Seal Records, the court requires a current, verified copy of your State criminal history attached to the Petition. If our eligibility review indicates you may qualify, our office will send you a <strong>Sealing Record Packet</strong> that walks you through exactly how to get both your State and Federal criminal records — including the fingerprints, money orders, and applications required.</p>
+    </div>
+    <div class="faq-item" id="what-happens-after-i-submit-my-criminal-history-records">
+      <h3>What happens after I submit my criminal history records?</h3>
+      <p>Upon receipt of your State criminal history record, our office will provide a free legal consultation to determine exactly how to proceed. Once the legal fee is agreed upon, counsel will file the Petition in the appropriate court and represent you at all court appearances. After the court grants the Petition, we prepare the Order Sealing Record, disseminate certified copies to all agencies involved in your arrest, and monitor compliance until your record has been removed from state and federal databases.</p>
+    </div>
+    <div class="faq-item" id="do-i-have-to-appear-in-court">
+      <h3>Do I have to appear in court?</h3>
+      <p>In most cases your presence is not required — counsel represents you at all court appearances. Some jurisdictions do require the petitioner to be present at the hearing. We'll let you know in advance whether your attendance is needed.</p>
+    </div>
+    <div class="faq-item" id="will-my-record-be-completely-invisible-after-sealing">
       <h3>Will my record be completely invisible after sealing?</h3>
       <p>Sealed records are hidden from the general public, most employers, and landlords. Certain government agencies and law enforcement can still access them in limited circumstances. We'll explain exactly what sealing means for your specific situation.</p>
     </div>
-    <div class="faq-item">
+    <div class="faq-item" id="can-i-say-i-have-no-criminal-record-after-sealing">
       <h3>Can I say I have no criminal record after sealing?</h3>
       <p>In most cases, yes — Nevada law allows you to answer "no" on job applications and housing forms that ask about criminal history, once your record is sealed. There are limited exceptions, such as applications for certain government jobs or professional licenses. We'll walk you through exactly what you can and cannot say.</p>
     </div>
-    <div class="faq-item">
+    <div class="faq-item" id="will-my-employer-find-out-im-sealing-my-record">
       <h3>Will my employer find out I'm sealing my record?</h3>
       <p>No. The process is confidential. Your employer is not notified, and once the record is sealed, it will not appear on standard background checks employers use.</p>
     </div>
-    <div class="faq-item">
+    <div class="faq-item" id="does-nevada-have-expungement">
       <h3>Does Nevada have expungement?</h3>
       <p>Nevada does not have expungement, but record sealing achieves a very similar result. Your record is hidden from public view, most employers, and landlords — giving you a genuine fresh start. If you've been searching for "Nevada expungement," record sealing is what you're looking for.</p>
     </div>
-    <div class="faq-item">
+    <div class="faq-item" id="can-i-seal-my-record-if-i-have-cases-in-multiple-nevada-counties">
       <h3>Can I seal my record if I have cases in multiple Nevada counties?</h3>
-      <p>Yes. We handle cases across all Nevada counties and have appeared in over 70 Nevada courts. Having records in multiple counties adds some complexity but is very manageable — we coordinate everything on your behalf.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Will sealing my record affect my immigration status?</h3>
-      <p><em style="color:#b00; font-style:italic;">Attorney needs to answer — specific guidance on immigration implications for non-U.S. citizens seeking record sealing, including whether he recommends consulting an immigration attorney as well. We can remove this at any time if we do not want to add this.</em></p>
-    </div>
-    <div class="faq-item">
-      <h3>Can I seal my record myself without an attorney?</h3>
-      <p><em style="color:#1a6b3c; font-style:italic;"><strong>AI Answer — Attorney Stover should revise:</strong> Technically yes. But a single mistake can result in a denial that resets your waiting period — meaning you could wait years before you're eligible to try again. Most people who attempt it themselves wish they hadn't. <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_yqI7UKzdTpxzrADOgNutMs4DZNOLq00hpJLvUc976NwBHw/viewform" target="_blank" rel="noopener">Let us help — check your eligibility for free.</a></em></p>
+      <p>Yes. We handle cases across all Nevada counties. Having records in multiple counties — including both Washoe County and other Nevada counties — adds some complexity but is very manageable. We coordinate everything on your behalf.</p>
     </div>
     <div class="faq-item" id="pricing">
       <h3>How much does record sealing cost?</h3>
-      <p><em style="color:#b00; font-style:italic;">Attorney needs to answer — Lindsay recommends leading with a starting price (e.g. "Record sealing starts at $[amount]") so visitors know what to expect, followed by a note that flexible payment plans are available. End with the link below. Remove this note once Ken has filled in the answer.<br><br><a href="https://docs.google.com/forms/d/e/1FAIpQLSf_yqI7UKzdTpxzrADOgNutMs4DZNOLq00hpJLvUc976NwBHw/viewform" target="_blank" rel="noopener">Check Your Eligibility for Free →</a></em></p>
+      <p>Our fees are dependent on each record. In some instances, there are multiple charges that can be resolved in one court with one petition, and in other instances, multiple charges will require multiple petitions. Some courts also require appearances of Counsel and others do not.</p>
+      <p>Each Petition is generally $2,000 for a misdemeanor and $4,000 for felonies. The only other fees would be the filing fee for the Petition.</p>
+      <p><a href="eligibility">Check Your Eligibility for Free →</a></p>
+    </div>
+    <div class="faq-item" id="contact">
+      <h3>Have a question we haven't answered?</h3>
+      <p>Email us at <a href="mailto:clarissa@kenstoverlaw.com">clarissa@kenstoverlaw.com</a> and our team will get back to you. For the fastest answer about your own record, <a href="eligibility">check your eligibility for free</a>.</p>
     </div>
 
   </div>
@@ -304,20 +610,57 @@
 <!-- CTA BANNER -->
 <div class="cta-banner">
   <h2>Ready to Check Your Eligibility for Free?</h2>
-  <p>Fill out our free form and Attorney Stover's team will review your situation and get back to you within 1 business day.</p>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_yqI7UKzdTpxzrADOgNutMs4DZNOLq00hpJLvUc976NwBHw/viewform" target="_blank" rel="noopener" class="btn-primary">Fill Out the Free Qualification Form →</a>
+  <p>Fill out our free form and our team will review your situation and reach out with next steps.</p>
+  <a href="eligibility" class="btn-primary">Fill Out the Free Qualification Form →</a>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <p style="margin-bottom:0.5rem;">
-    © 2026 Law Offices of Kenneth A. Stover &nbsp;|&nbsp;
-    <a href="https://www.kenstoverlaw.com" target="_blank">kenstoverlaw.com</a> &nbsp;|&nbsp;
-    (775) 502-1575 &nbsp;|&nbsp;
-    300 S Arlington Ave, Ste. B, Reno, NV 89501
-  </p>
-  <p>Member, State Bar of Nevada &nbsp;·&nbsp; Washoe County Bar Association</p>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <div class="footer-brand-name">Nevada Sealing Records</div>
+      <div class="footer-founder">Founded by Kenneth A. Stover</div>
+      <p class="footer-areas">Serving Reno, Sparks, Lake Tahoe, Carson City and all of Northern Nevada.</p>
+      <p>We handle Nevada record sealing so old charges stop costing you opportunities.</p>
+      <div class="footer-contact">
+        <a class="footer-phone" href="tel:+17753254554">☎ (775) 325-4554</a>
+        <a href="mailto:clarissa@kenstoverlaw.com">✉ clarissa@kenstoverlaw.com</a>
+      </div>
+    </div>
+    <div>
+      <p class="footer-col-label">Navigate</p>
+      <ul class="footer-links">
+            <li><a href="faq">FAQ</a></li>
+        <li><a href="pricing">Pricing</a></li>
+        <li><a href="kenneth-a-stover">About Ken Stover</a></li>
+        <li><a href="privacy">Privacy Policy</a></li>
+        <li><a href="eligibility" class="footer-cta">Check Eligibility →</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <p class="footer-copyright">© 2026 Nevada Sealing Records. All rights reserved.</p>
+    </div>
+    <p class="footer-disclaimer">The information on this website is for general informational purposes only and does not constitute legal advice. Submitting a form or sending an email does not create an attorney-client relationship. Results vary based on individual circumstances.</p>
+  </div>
 </footer>
 
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  hamburger.addEventListener('click', function() {
+    const open = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+    });
+  });
+</script>
 </body>
 </html>

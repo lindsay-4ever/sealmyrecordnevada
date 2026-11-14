@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="color-scheme" content="light">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Security: only this site's own files may load, and the form may only send data to our Supabase project.
+       Cloudflare Turnstile (the spam check) is the one outside script allowed; it never sees the form answers.
+       Google Tag Manager, Google Analytics, Google Ads and the Meta Pixel are also allowed (domains from Google's CSP guide plus Meta's two).
+       They may receive page views and the detail-free "form_started" and "lead_submitted" events only, never form answers. Add no other domains. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com https://www.googletagmanager.com https://tagmanager.google.com https://www.googleadservices.com https://www.google.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://tagmanager.google.com https://fonts.googleapis.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.google.com https://*.g.doubleclick.net https://www.googleadservices.com https://pagead2.googlesyndication.com https://ssl.gstatic.com https://www.gstatic.com https://www.facebook.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' https://ubtmdxknrhdeqtixhyri.supabase.co https://www.googletagmanager.com https://*.google-analytics.com https://*.google.com https://*.g.doubleclick.net https://ad.doubleclick.net https://www.googleadservices.com https://pagead2.googlesyndication.com https://www.facebook.com https://connect.facebook.net; object-src 'none'; base-uri 'self'; form-action 'none'; frame-src https://challenges.cloudflare.com https://www.googletagmanager.com; manifest-src 'self'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <script>if (window.top !== window.self) { document.documentElement.style.display = 'none'; try { window.top.location = window.self.location.href; } catch (e) {} }</script>
+  <title>Free Reno & Nevada Record Sealing Eligibility Check</title>
+  <script src="/js/gtm.js"></script>
+  <script src="/js/lead-source.js"></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+  <meta name="description" content="Find out if you can seal your Nevada criminal record. Answer a few questions about your case — free, confidential, and no obligation." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://nevadasealingrecords.com/eligibility" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Free Nevada Record Sealing Eligibility Check" />
+  <meta property="og:description" content="Find out if you can seal your Nevada criminal record. Answer a few questions about your case — free, confidential, and no obligation." />
+  <meta property="og:url" content="https://nevadasealingrecords.com/eligibility" />
+  <meta property="og:site_name" content="Nevada Sealing Records" />
+  <meta property="og:image" content="https://nevadasealingrecords.com/images/nevada-sealing-records-share.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Nevada Sealing Records — Seal your Nevada criminal record. Start fresh." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://nevadasealingrecords.com/images/nevada-sealing-records-share.jpg" />
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0d2b4e">
+  <link rel="preload" href="fonts/eb-garamond-500.woff2" as="font" type="font/woff2" crossorigin>
+
+  <style>
+    @font-face { font-family: 'EB Garamond'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonts/eb-garamond-500.woff2') format('woff2'); }
+    /* ── SITE NAV ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: #0d2b4e;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5%;
+      height: 68px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    }
+    .nav-logo {
+      color: #c9a84c;
+      font-size: 1.05rem;
+      font-weight: bold;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      font-family: Georgia, serif;
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      list-style: none;
+    }
+    .nav-links li:last-child { margin-left: 0.4rem; }
+    .nav-links a {
+      color: #ccd6e0;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover { color: #c9a84c; }
+    .nav-cta {
+      background: #c9a84c;
+      color: #0d2b4e !important;
+      padding: 0.45rem 1rem;
+      border-radius: 4px;
+      font-weight: bold !important;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: #e8c96a !important; color: #0d2b4e !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; z-index: 101; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #c9a84c; border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 768px) {
+      nav { padding: 0 4%; }
+      .hamburger { display: flex; }
+      .nav-links { display: none; position: fixed; top: 68px; left: 0; right: 0; background: #0d2b4e; flex-direction: column; padding: 0.5rem 5% 1.5rem; gap: 0; border-top: 1px solid rgba(255,255,255,0.1); box-shadow: 0 4px 16px rgba(0,0,0,0.3); z-index: 99; }
+      .nav-links.open { display: flex; }
+      .nav-links li { border-bottom: 1px solid rgba(255,255,255,0.07); }
+      .nav-links a { padding: 0.9rem 0; display: block; font-size: 0.95rem; }
+      .nav-cta { margin: 1rem 0 0.3rem; text-align: center; display: block; padding: 0.8rem 1rem !important; border-radius: 5px !important; }
+    }
+
+    /* ── FORM THEME ── */
+    :root{
+      --navy:#0d2b4e; --navy-light:#173e6b;
+      --gold:#c9a84c; --gold-light:#e6d5a3;
+      --bg:#f5f4f0; --white:#ffffff; --card:#ffffff;
+      --text:#1c2b3a; --muted:#5b6b7b; --border:#dcdfe4;
+      --input-bg:#ffffff; --option-hover-bg:#fdfbf5; --option-selected-bg:#eef3f8;
+      --summary-bg:#f8f9fb;
+      --flag-red:#b3261e; --flag-green:#1e7a34;
+      --green-bg:#eaf6ee; --green-border:#3f9e5c; --green-text:#1f5c33;
+      --amber-bg:#fdf3e2; --amber-border:#c9a84c; --amber-text:#6b5211;
+      --red-bg:#fbeaea; --red-border:#c0463f; --red-text:#7a251f;
+      --pill-bg:#eef3f8; --pill-text:#0d2b4e;
+    }
+    /* Dark mode removed — form always uses the light theme, matching the rest of the site. */
+    :root{ color-scheme: light; }
+
+    a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible{
+      outline:2.5px solid var(--gold); outline-offset:2px;
+    }
+    body{
+      margin:0;
+      padding-top: 68px;
+      background:var(--bg); color:var(--text); font-family:Arial, Helvetica, sans-serif; line-height:1.5;
+    }
+    ::selection{ background:var(--gold-light); color:var(--navy); }
+    h1,h2,h3{ font-family:Georgia, 'Times New Roman', serif; color:var(--navy); margin-top:0; text-wrap:balance; }
+    .wrap{ max-width:720px; margin:0 auto; padding:28px 20px 80px; }
+
+    header.hero{ text-align:center; margin-bottom:24px; }
+    header.hero h1{ font-size:27px; margin-bottom:6px; }
+    header.hero p{ color:var(--muted); font-size:14.5px; margin:0; }
+    .brand-wordmark{ font-family:Georgia, serif; font-style:italic; color:var(--gold); font-size:14px; letter-spacing:.3px; margin:0 0 8px; }
+
+    .progress-track{ background:var(--border); height:6px; border-radius:4px; margin:22px 0 26px; overflow:hidden; }
+    .progress-fill{ background:var(--gold); height:100%; width:6%; transition:width .3s ease; }
+    .step-label{ font-size:13px; color:var(--muted); margin-bottom:4px; display:flex; justify-content:space-between; }
+    .step-label .step-name{ font-family:Georgia, serif; font-style:italic; color:var(--gold); }
+
+    .card{ background:var(--card); border:1px solid var(--border); border-radius:14px; padding:26px 24px; box-shadow:0 1px 3px rgba(13,43,78,0.06); }
+    .step{ display:none; }
+    .step.active{ display:block; animation:fade .22s ease; }
+    @keyframes fade{ from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:none;} }
+    @media (prefers-reduced-motion: reduce){ .step.active{ animation:none; } }
+
+    .q-title{ font-size:19px; margin-bottom:6px; font-family:Georgia, serif; color:var(--navy); }
+    .q-help{ color:var(--muted); font-size:13.5px; margin-bottom:16px; }
+    .deadline-red{ color:var(--flag-red); }
+    .field-hint{ color:var(--muted); font-size:12.5px; margin:5px 0 0; }
+    .loc-row{ display:flex; gap:12px; flex-wrap:wrap; }
+    .loc-city{ flex:2 1 220px; } .loc-state{ flex:1 1 160px; }
+    label.field-label.sub{ font-weight:normal; font-size:13px; margin-top:4px; }
+
+    .stop-list{ list-style:none; margin:14px 0 18px; display:flex; flex-direction:column; gap:8px; }
+    .stop-list li{ display:flex; align-items:flex-start; gap:10px; font-size:14px; padding:10px 12px; background:var(--red-bg); border:1px solid var(--red-border); border-radius:8px; color:var(--red-text); }
+    .stop-list li::before{ content:"✕"; font-weight:bold; flex-shrink:0; margin-top:1px; }
+
+    .options{ display:flex; flex-direction:column; gap:9px; margin-bottom:6px; }
+    .option{ display:flex; align-items:flex-start; gap:11px; border:1.5px solid var(--border); border-radius:10px; padding:12px 14px; cursor:pointer; transition:border-color .15s, background .15s; }
+    .option:hover{ border-color:var(--gold); background:var(--option-hover-bg); }
+    .option.selected{ border-color:var(--navy); background:var(--option-selected-bg); }
+    .option input{ margin-top:3px; accent-color:var(--navy); flex-shrink:0; }
+    .option .opt-text{ font-size:14.5px; }
+    .option .opt-sub{ font-size:12.5px; color:var(--muted); margin-top:2px; }
+
+    label.field-label{ display:block; font-size:13.5px; font-weight:bold; margin:13px 0 6px; color:var(--navy); }
+    select, input[type=date], input[type=month], input[type=text], input[type=email], input[type=tel], textarea{
+      width:100%; padding:10px 12px; border:1.5px solid var(--border); border-radius:8px;
+      font-size:14.5px; font-family:Arial, sans-serif; color:var(--text); background:var(--input-bg);
+    }
+    select{ color-scheme: light; }
+    select:focus, input:focus, textarea:focus{ outline:none; border-color:var(--navy); }
+    textarea{ resize:vertical; min-height:70px; }
+    .date-row{ display:grid; grid-template-columns:1.4fr 1fr; gap:10px; }
+    .inline-check{ display:flex; align-items:center; gap:8px; margin-top:10px; font-size:13.5px; color:var(--muted); }
+
+    .field-error{ display:flex; align-items:flex-start; gap:7px; margin:7px 0 4px; font-size:14px; line-height:1.4; font-family:Arial, sans-serif; color:var(--flag-red); }
+    .field-error::before{ content:"!"; flex-shrink:0; width:17px; height:17px; margin-top:1px; border-radius:50%; background:var(--flag-red); color:#fff; font-size:12px; font-weight:bold; line-height:17px; text-align:center; }
+    [aria-invalid="true"]{ border-color:var(--flag-red) !important; }
+    .options[data-invalid] .option{ border-color:var(--flag-red); }
+    .consent{ display:flex; gap:10px; align-items:flex-start; margin-top:14px; font-size:13px; color:var(--muted); }
+    .consent input{ margin-top:3px; flex-shrink:0; }
+    .ts-box{ margin-top:12px; }
+
+    .nav-row{ display:flex; justify-content:space-between; align-items:center; margin-top:24px; }
+    button{ font-family:Arial, sans-serif; font-size:14.5px; font-weight:bold; border-radius:8px; padding:11px 20px; cursor:pointer; border:none; transition:opacity .15s; }
+    button:disabled{ opacity:.4; cursor:not-allowed; }
+    .btn-primary{ background:var(--navy); color:#f5f4f0; }
+    .btn-primary:hover:not(:disabled){ opacity:.88; }
+    .btn-ghost{ background:transparent; color:var(--navy); border:1.5px solid var(--border); }
+    .btn-ghost:hover{ border-color:var(--navy); }
+    .btn-gold{ background:var(--gold); color:var(--navy); font-size:15px; padding:13px 28px; border-radius:8px; display:inline-block; text-decoration:none; margin-top:6px; }
+    .btn-gold:hover{ opacity:.88; }
+
+    .result-card{ border-radius:12px; padding:22px; border:1.5px solid; margin-bottom:16px; }
+    .result-eligible{ background:var(--green-bg); border-color:var(--green-border); }
+    .result-eligible h2{ color:var(--green-text); }
+    .result-waiting{ background:var(--amber-bg); border-color:var(--amber-border); }
+    .result-waiting h2{ color:var(--amber-text); }
+    .result-contact{ background:var(--amber-bg); border-color:var(--amber-border); }
+    .result-contact h2{ color:var(--amber-text); }
+    .result-disqualified{ background:var(--red-bg); border-color:var(--red-border); }
+    .result-disqualified h2{ color:var(--red-text); }
+
+    .next-steps{ margin-top:16px; }
+    .next-steps h3{ font-size:15px; margin-bottom:10px; }
+    .next-step-item{ display:flex; gap:12px; align-items:flex-start; margin-bottom:12px; font-size:13.5px; }
+    .step-num{ background:var(--navy); color:#fff; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:bold; flex-shrink:0; margin-top:1px; }
+
+    /* ── CHARGE SEARCH ── */
+    .charge-search-wrap{ margin-bottom:8px; }
+    .charge-search-input{ width:100%; padding:11px 14px; border:1.5px solid var(--border); border-radius:8px; font-size:14.5px; font-family:Arial, sans-serif; color:var(--text); background:var(--input-bg); }
+    .charge-search-input:focus{ outline:none; border-color:var(--navy); }
+    .charge-search-results{ border:1px solid var(--border); border-radius:8px; margin-top:6px; overflow:hidden; display:none; background:var(--card); }
+    .charge-search-results.expanded{ max-height:360px; overflow-y:auto; }
+    .search-result{ display:block; width:100%; text-align:left; font:inherit; color:inherit; background:var(--card); border:none; padding:11px 14px; cursor:pointer; border-bottom:1px solid var(--border); transition:background .12s; }
+    .search-result:last-child{ border-bottom:none; }
+    .search-result:hover, .search-result:focus-visible, .search-result.sr-selected{ background:var(--option-selected-bg); outline:none; }
+    .show-more{ display:block; width:100%; text-align:left; font:inherit; font-size:13.5px; font-weight:bold; color:var(--navy); background:var(--card); border:none; padding:11px 14px; cursor:pointer; text-decoration:underline; }
+    .show-more:hover{ color:var(--gold); }
+    .search-more-note{ padding:10px 14px; color:var(--muted); font-size:12.5px; }
+    .sr-name{ display:block; font-size:14px; font-weight:bold; color:var(--text); margin-bottom:3px; }
+    .sr-detail{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+    .sr-nrs{ font-size:12px; color:var(--muted); }
+    .sr-badge{ font-size:11px; font-weight:bold; padding:2px 7px; border-radius:20px; }
+    .sr-badge-yes{ background:var(--green-bg); color:var(--green-text); border:1px solid var(--green-border); }
+    .sr-badge-no{ background:var(--red-bg); color:var(--red-text); border:1px solid var(--red-border); }
+    .selected-charge-box{ background:var(--option-selected-bg); border:1.5px solid var(--navy); border-radius:8px; padding:12px 14px; margin-top:8px; }
+    .selected-charge-box .sc-head{ display:flex; justify-content:space-between; align-items:baseline; gap:10px; margin-bottom:4px; }
+    .selected-charge-box .sc-label{ font-size:11px; font-weight:bold; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); }
+    .sc-change{ font:inherit; font-size:13px; color:var(--navy); text-decoration:underline; background:none; border:none; padding:0; cursor:pointer; }
+    .sc-change:hover{ color:var(--gold); }
+    .selected-charge-box .sc-name{ font-size:14.5px; font-weight:bold; color:var(--navy); }
+    .selected-charge-box .sc-meta{ font-size:12.5px; color:var(--muted); margin-top:3px; }
+    .search-no-results{ padding:12px 14px; color:var(--muted); font-size:13.5px; }
+    .search-hint{ font-size:12.5px; color:var(--muted); margin-top:6px; }
+    .cant-find-link{ display:inline-block; margin-top:14px; font-size:13.5px; color:var(--navy); text-decoration:underline; cursor:pointer; background:none; border:none; padding:0; font-family:inherit; }
+    .cant-find-link:hover{ color:var(--gold); }
+
+    .disclaimer{ font-size:12px; color:var(--muted); margin-top:20px; line-height:1.6; }
+    .brand-foot{ text-align:center; margin-top:30px; font-size:13px; color:var(--muted); }
+    .brand-foot strong{ color:var(--navy); }
+
+    /* FOOTER */
+    footer { background: #070f1a; }
+    .footer-main { max-width: 1100px; margin: 0 auto; padding: 64px 5% 56px; display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; }
+    .footer-brand-name { font-family: 'EB Garamond', 'Georgia', serif; font-size: 1.15rem; font-weight: 500; color: #c9a84c; letter-spacing: 0.01em; margin-bottom: 0.4rem; line-height: 1.3; }
+    .footer-founder { font-family: 'Arial', sans-serif; font-size: 0.75rem; color: rgba(255,255,255,0.35); letter-spacing: 0.04em; margin-bottom: 1rem; }
+    .footer-brand p { font-family: 'Arial', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.7; max-width: 300px; margin-bottom: 1.4rem; }
+    .footer-areas { font-family: Arial, sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.7); margin: 0.4rem 0 0.8rem; max-width: 300px; line-height: 1.6; }
+    .footer-contact { display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-contact a.footer-phone { flex-wrap: wrap; row-gap: 2px; }
+    .footer-contact .phone-digits { flex-basis: 100%; font-size: 0.75rem; opacity: 0.7; padding-left: 1.35em; }
+    .footer-contact a { font-family: 'Arial', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.88); text-decoration: none; transition: color 0.18s; display: inline-flex; align-items: center; gap: 0.45rem; }
+    .footer-contact a:hover { color: #c9a84c; }
+    .footer-col-label { font-family: 'Arial', sans-serif; font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: #c9a84c; margin-bottom: 1.1rem; opacity: 0.85; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+    .footer-links a { font-family: 'Arial', sans-serif; font-size: 0.84rem; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.18s; line-height: 1.4; }
+    .footer-links a:hover { color: rgba(255,255,255,0.88); }
+    .footer-links a.footer-cta { color: #c9a84c; font-weight: bold; font-size: 0.82rem; letter-spacing: 0.02em; margin-top: 0.3rem; }
+    .footer-links a.footer-cta:hover { color: #e8c96a; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.09); }
+    .footer-bottom-inner { max-width: 1100px; margin: 0 auto; padding: 20px 5%; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .footer-copyright { font-family: 'Arial', sans-serif; font-size: 0.76rem; color: rgba(255,255,255,0.55); line-height: 1.5; }
+    .footer-social a { font-family: 'Arial', sans-serif; font-size: 0.76rem; color: rgba(255,255,255,0.55); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.18s; }
+    .footer-social a:hover { color: #c9a84c; }
+    .footer-disclaimer { max-width: 1100px; margin: 0 auto; padding: 0 5% 20px; font-family: 'Arial', sans-serif; font-size: 0.7rem; color: rgba(255,255,255,0.25); line-height: 1.6; text-align: center; }
+    @media (max-width: 620px) {
+      .footer-main { grid-template-columns: 1fr; padding: 48px 6% 40px; gap: 2rem; }
+      .footer-brand p { max-width: none; }
+      .footer-bottom-inner { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    }
+  
+    /* Accessibility: readable contrast for small text */
+    .footer-founder, .footer-disclaimer { color: rgba(255,255,255,0.6) !important; }
+    #stepName { color: #86691f !important; }  /* deeper gold for small text on light backgrounds */
+
+    /* Phones: less stacked side padding, so the form uses more of the screen width. */
+    @media (max-width: 480px) {
+      .wrap{ padding-left:12px; padding-right:12px; }
+      .card{ padding:22px 16px; }
+    }
+    /* Phones: the "cannot be sealed" list as one compact panel instead of seven boxes,
+       so the Yes/No answers are closer to the top. Same wording as on desktop. */
+    @media (max-width: 620px) {
+      .stop-list{ gap:0; margin:10px 0 14px; padding:6px 12px; background:var(--red-bg); border:1px solid var(--red-border); border-radius:8px; }
+      .stop-list li{ padding:4px 0; background:none; border:none; border-radius:0; font-size:13.5px; line-height:1.35; gap:8px; }
+    }
+    /* Touch screens: 16px text in fields, so iPhones don't zoom in when a field is tapped. */
+    @media (pointer: coarse) {
+      select, input[type=date], input[type=month], input[type=text], input[type=email], input[type=tel], textarea, .charge-search-input{ font-size:16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">Nevada Sealing Records</a>
+  <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="kenneth-a-stover">Ken Stover</a></li>
+    <li><a href="faq">FAQ</a></li>
+    <li><a href="pricing">Pricing</a></li>
+    <li><a href="eligibility" class="nav-cta">Check Your Eligibility for Free</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+
+  <header class="hero">
+    <p class="brand-wordmark">Nevada Sealing Records</p>
+    <h1>Check Your Eligibility to Seal Your Nevada Record</h1>
+    <p>Answer a few questions about your Reno or Nevada case — no cost, no obligation.</p>
+  </header>
+
+  <div class="step-label">
+    <span id="stepLabel">Step 1</span>
+    <span class="step-name" id="stepName">Eligibility check</span>
+  </div>
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+  <div class="card">
+
+    <!-- STOP: Disqualifying convictions -->
+    <div class="step active" data-step="stop">
+      <div class="q-title">First — a few charges that cannot be sealed in Nevada.</div>
+      <div class="q-help">Under Nevada law, a Petition to Seal Records will not be granted if you were convicted of any of the following:</div>
+      <ul class="stop-list">
+        <li>Felony Driving Under the Influence (DUI)</li>
+        <li>A felony sex offense</li>
+        <li>Home invasion with the use of a deadly weapon</li>
+        <li>Kidnapping a child</li>
+        <li>False imprisonment of a child</li>
+        <li>Sex trafficking a child</li>
+        <li>First Degree Murder with intent to commit Sexual Assault</li>
+      </ul>
+      <div class="q-help" style="margin-bottom:0;">Were you convicted of any of the charges listed above?</div>
+      <div class="options" style="margin-top:12px;">
+        <label class="option"><input type="radio" name="stop" value="no"><div><div class="opt-text">No — none of these apply to me</div></div></label>
+        <label class="option"><input type="radio" name="stop" value="yes"><div><div class="opt-text">Yes — I was convicted of one of these</div></div></label>
+      </div>
+    </div>
+
+    <!-- Court type: Nevada state court? -->
+    <div class="step" data-step="court_type">
+      <div class="q-title">Was your case handled in a Nevada state court?</div>
+      <div class="q-help">Nevada's record sealing law applies to Nevada state court cases. If you're unsure, most arrests by local or state police result in state court cases.</div>
+      <div class="options">
+        <label class="option"><input type="radio" name="court_type" value="yes"><div><div class="opt-text">Yes — Nevada state court</div></div></label>
+        <label class="option"><input type="radio" name="court_type" value="no"><div><div class="opt-text">No — federal court or another state</div></div></label>
+      </div>
+    </div>
+
+    <!-- Q1: What were you arrested for? -->
+    <div class="step" data-step="arrest">
+      <div class="q-title">What were you arrested for?</div>
+      <div class="q-help">Choose the option that best describes your arrest. If you're not sure, select "I'm not sure."</div>
+      <div class="options">
+        <label class="option"><input type="radio" name="arrest" value="felony"><div><div class="opt-text">A felony</div><div class="opt-sub">More serious charges — robbery, assault, drug felonies, etc.</div></div></label>
+        <label class="option"><input type="radio" name="arrest" value="misdemeanor"><div><div class="opt-text">A misdemeanor</div><div class="opt-sub">Less serious charges — simple possession, petty theft, trespassing, etc.</div></div></label>
+        <label class="option"><input type="radio" name="arrest" value="unknown"><div><div class="opt-text">I'm not sure</div></div></label>
+      </div>
+    </div>
+
+    <!-- Q2a: Felony charges filed? -->
+    <div class="step" data-step="q2a">
+      <div class="q-title">Were felony charges formally filed against you?</div>
+      <div class="q-help">A charge is "filed" when the prosecutor formally charges you in court — this is different from being arrested.</div>
+      <div class="options">
+        <label class="option"><input type="radio" name="q2a" value="yes_felony"><div><div class="opt-text">Yes — felony charges were filed</div></div></label>
+        <label class="option"><input type="radio" name="q2a" value="yes_misd"><div><div class="opt-text">No — but misdemeanor charges were filed instead</div></div></label>
+        <label class="option"><input type="radio" name="q2a" value="no_charges"><div><div class="opt-text">No — no formal charges were ever filed</div></div></label>
+      </div>
+    </div>
+
+    <!-- Q2b: Misdemeanor charges filed? -->
+    <div class="step" data-step="q2b">
+      <div class="q-title">Were misdemeanor charges formally filed against you?</div>
+      <div class="q-help">A charge is "filed" when the prosecutor formally charges you in court — this is different from being arrested.</div>
+      <div class="options">
+        <label class="option"><input type="radio" name="q2b" value="yes_misd"><div><div class="opt-text">Yes — misdemeanor charges were filed</div></div></label>
+        <label class="option"><input type="radio" name="q2b" value="yes_felony"><div><div class="opt-text">No — but more serious felony charges were filed instead</div></div></label>
+        <label class="option"><input type="radio" name="q2b" value="no_charges"><div><div class="opt-text">No — no formal charges were ever filed</div></div></label>
+      </div>
+    </div>
+
+    <!-- Q2c: Were you convicted? (unknown arrest type) -->
+    <div class="step" data-step="q2c">
+      <div class="q-title">Were you convicted of any charge?</div>
+      <div class="options">
+        <label class="option"><input type="radio" name="q2c" value="yes"><div><div class="opt-text">Yes — I was convicted</div><div class="opt-sub">Found guilty, pled guilty, or pled no contest</div></div></label>
+        <label class="option"><input type="radio" name="q2c" value="no"><div><div class="opt-text">No — I was not convicted</div></div></label>
+        <label class="option"><input type="radio" name="q2c" value="unknown"><div><div class="opt-text">I don't know</div></div></label>
+      </div>
+    </div>
+
+    <!-- Q3a: Convicted of felony? -->
+    <div class="step" data-step="q3a">
+      <div class="q-title">Were you convicted of the felony charges?</div>
+      <div class="q-help">Found guilty, pled guilty, or pled no contest.</div>
+      <div class="options">
+        <label class="option"><input type="radio" name="q3a" value="yes"><div><div class="opt-text">Yes — I was convicted of a felony</div></div></label>
+        <label class="option"><input type="radio" name="q3a" value="no"><div><div class="opt-text">No — I was not convicted</div></div></label>
+      </div>
+    </div>
+
+    <!-- Q3b: Convicted of misdemeanor? -->
+    <div class="step" data-step="q3b">
+      <div class="q-title">Were you convicted of the misdemeanor charges?</div>
+      <div class="q-help">Found guilty, pled guilty, or pled no contest.</div>
+      <div class="options">
+        <label class="option"><input type="radio" name="q3b" value="yes"><div><div class="opt-text">Yes — I was convicted of a misdemeanor</div></div></label>
+        <label class="option"><input type="radio" name="q3b" value="no"><div><div class="opt-text">No — I was not convicted</div></div></label>
+      </div>
+    </div>
+
+    <!-- Q4a: Felony charge search -->
+    <div class="step" data-step="q4a">
+      <div class="q-title">What felony charge were you convicted of?</div>
+      <div class="q-help">Type your charge name or NRS citation number to look it up — you'll see the exact waiting period that applies to your case.</div>
+      <div class="charge-search-wrap">
+        <input type="text" id="chargeSearchFelony" class="charge-search-input" placeholder="E.g. robbery, burglary, NRS 205.060…" autocomplete="off" spellcheck="false">
+        <div id="chargeResultsFelony" class="charge-search-results"></div>
+        <div id="selectedChargeBoxFelony" class="selected-charge-box" style="display:none;">
+          <div class="sc-head"><div class="sc-label">Selected charge</div><button type="button" class="sc-change" data-charge-step="q4a">Change</button></div>
+          <div class="sc-name" id="selectedChargeNameFelony"></div>
+          <div class="sc-meta" id="selectedChargeMetaFelony"></div>
+        </div>
+        <p class="search-hint">Type at least 3 characters to search. Can't find it? <button type="button" class="cant-find-link" onclick="setCantFind('q4a')">I can't find my charge →</button></p>
+      </div>
+    </div>
+
+    <!-- Q4b: Felony charges dismissed? -->
+    <div class="step" data-step="q4b">
+      <div class="q-title">Were your felony charges dismissed?</div>
+      <div class="options">
+        <label class="option"><input type="radio" name="q4b" value="yes"><div><div class="opt-text">Yes — the charges were dismissed</div></div></label>
+        <label class="option"><input type="radio" name="q4b" value="no"><div><div class="opt-text">No</div></div></label>
+        <label class="option"><input type="radio" name="q4b" value="unknown"><div><div class="opt-text">I'm not sure</div></div></label>
+      </div>
+    </div>
+
+    <!-- Q5a: Misdemeanor charge search -->
+    <div class="step" data-step="q5a">
+      <div class="q-title">What misdemeanor charge were you convicted of?</div>
+      <div class="q-help">Type your charge name or NRS citation number — you'll see the exact waiting period that applies to your case.</div>
+      <div class="charge-search-wrap">
+        <input type="text" id="chargeSearchMisd" class="charge-search-input" placeholder="E.g. battery, DUI, trespassing, NRS 200.481…" autocomplete="off" spellcheck="false">
+        <div id="chargeResultsMisd" class="charge-search-results"></div>
+        <div id="selectedChargeBoxMisd" class="selected-charge-box" style="display:none;">
+          <div class="sc-head"><div class="sc-label">Selected charge</div><button type="button" class="sc-change" data-charge-step="q5a">Change</button></div>
+          <div class="sc-name" id="selectedChargeNameMisd"></div>
+          <div class="sc-meta" id="selectedChargeMetaMisd"></div>
+        </div>
+        <p class="search-hint">Type at least 3 characters to search. Can't find it? <button type="button" class="cant-find-link" onclick="setCantFind('q5a')">I can't find my charge →</button></p>
+      </div>
+    </div>
+
+    <!-- Can't find charge — open-ended description -->
+    <div class="step" data-step="cant_find">
+      <div class="q-title">No problem — tell us what you remember</div>
+      <div class="q-help">Even partial details help. Our office will review your situation and reach out to help identify your charge and your options.</div>
+      <label class="field-label" for="chargeDescription">Describe your charge (e.g. "I think it was drug-related" or "something involving theft around 2018")</label>
+      <textarea id="chargeDescription" name="chargeDescription" rows="4" placeholder="Any details you remember — the more the better, but even a few words help." style="width:100%; font-size:15px; padding:10px 12px; border:1.5px solid #ccc; border-radius:6px; resize:vertical; font-family:inherit; box-sizing:border-box;"></textarea>
+      <p style="font-size:13px; color:#666; margin-top:8px;">This field is optional — just skip it if you're not sure. We'll still follow up.</p>
+    </div>
+
+    <!-- Q5b: Misdemeanor charges dismissed? -->
+    <div class="step" data-step="q5b">
+      <div class="q-title">Were your misdemeanor charges dismissed?</div>
+      <div class="options">
+        <label class="option"><input type="radio" name="q5b" value="yes"><div><div class="opt-text">Yes — the charges were dismissed</div></div></label>
+        <label class="option"><input type="radio" name="q5b" value="no"><div><div class="opt-text">No</div></div></label>
+        <label class="option"><input type="radio" name="q5b" value="unknown"><div><div class="opt-text">I'm not sure</div></div></label>
+      </div>
+    </div>
+
+    <!-- Q6b: Were charges dismissed? (unknown conviction path) -->
+    <div class="step" data-step="q6b">
+      <div class="q-title">Were your charges dismissed?</div>
+      <div class="options">
+        <label class="option"><input type="radio" name="q6b" value="yes"><div><div class="opt-text">Yes — the charges were dismissed</div></div></label>
+        <label class="option"><input type="radio" name="q6b" value="no"><div><div class="opt-text">No</div></div></label>
+      </div>
+    </div>
+
+    <!-- Q6a: When were you convicted? (convicted + unknown charge path) -->
+    <div class="step" data-step="q6a">
+      <div class="q-title">When were you convicted?</div>
+      <div class="q-help">Approximate is fine — this helps our office review your case before reaching out to you.</div>
+      <label class="field-label" id="convictionDateLabel">Approximate conviction date</label>
+      <div class="date-row" role="group" aria-labelledby="convictionDateLabel">
+        <select id="convictionMonth" aria-label="Month (optional)"><option value="">Month (if known)</option><option value="01">January</option><option value="02">February</option><option value="03">March</option><option value="04">April</option><option value="05">May</option><option value="06">June</option><option value="07">July</option><option value="08">August</option><option value="09">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select>
+        <select id="convictionYear" aria-label="Year"><option value="">Year</option></select>
+      </div>
+      <label class="inline-check"><input type="checkbox" id="convictionUnsure"> I'm not sure of the date</label>
+    </div>
+
+    <!-- Sentence date: when completed? -->
+    <div class="step" data-step="sentence_date">
+      <div class="q-title">When did you complete your sentence?</div>
+      <div class="q-help">Use the date your probation or parole ended, or when you made your final payment — whichever was latest. The waiting period runs from this date, not from your arrest or conviction.</div>
+      <label class="field-label" id="completionDateLabel">Sentence completion date</label>
+      <div class="date-row" role="group" aria-labelledby="completionDateLabel">
+        <select id="completionMonth" aria-label="Month"><option value="">Month</option><option value="01">January</option><option value="02">February</option><option value="03">March</option><option value="04">April</option><option value="05">May</option><option value="06">June</option><option value="07">July</option><option value="08">August</option><option value="09">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select>
+        <select id="completionYear" aria-label="Year"><option value="">Year</option></select>
+      </div>
+      <label class="inline-check"><input type="checkbox" id="completionUnsure"> I'm not sure of the exact date</label>
+      <div id="waitPreview" style="margin-top:14px; font-size:13.5px; color:var(--muted); display:none;"></div>
+    </div>
+
+    <!-- Contact info -->
+    <div class="step" data-step="contact">
+      <div class="q-title" id="contactTitle">Almost done — how should we reach you?</div>
+      <div class="q-help" id="contactHelp">Enter your contact information and we'll follow up with your next steps.</div>
+      <label class="field-label" for="county">Which county was your case in?</label>
+      <div class="q-help" style="margin-bottom:8px; font-size:13px;">Nevada's sealing law is statewide — this just helps our office review your case.</div>
+      <select id="county" name="county">
+        <option value="">Select a county…</option>
+        <option value="Washoe">Washoe County (Reno, Sparks)</option>
+        <option value="Carson City">Carson City</option>
+        <option value="Churchill">Churchill County (Fallon)</option>
+        <option value="Douglas">Douglas County (Minden, Gardnerville, Lake Tahoe area)</option>
+        <option value="Elko">Elko County (Elko)</option>
+        <option value="Eureka">Eureka County (Eureka)</option>
+        <option value="Humboldt">Humboldt County (Winnemucca)</option>
+        <option value="Lander">Lander County (Battle Mountain)</option>
+        <option value="Lyon">Lyon County (Fernley, Yerington)</option>
+        <option value="Mineral">Mineral County (Hawthorne)</option>
+        <option value="Pershing">Pershing County (Lovelock)</option>
+        <option value="Storey">Storey County (Virginia City)</option>
+        <option value="White Pine">White Pine County (Ely)</option>
+        <option value="Clark">Clark County (Las Vegas, Henderson, North Las Vegas)</option>
+        <option value="Esmeralda">Esmeralda County (Goldfield)</option>
+        <option value="Lincoln">Lincoln County (Caliente, Pioche)</option>
+        <option value="Nye">Nye County (Pahrump)</option>
+        <option value="unknown">I'm not sure</option>
+      </select>
+      <label class="field-label" for="fullName">Full name</label>
+      <input type="text" id="fullName" name="fullName" autocomplete="name">
+      <label class="field-label" for="phone">Phone number</label>
+      <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="(775) 555-1234" maxlength="16" aria-describedby="phoneHelp">
+      <div class="field-hint" id="phoneHelp">10-digit U.S. number, e.g. (775) 555-1234</div>
+      <label class="field-label" for="email">Email address</label>
+      <input type="email" id="email" name="email" autocomplete="email" placeholder="name@example.com" aria-describedby="emailHelp">
+      <div class="field-hint" id="emailHelp">e.g. name@example.com</div>
+      <label class="field-label">Preferred contact method</label>
+      <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:14px;">
+        <label style="display:flex; align-items:center; gap:6px; font-size:14px; cursor:pointer;"><input type="radio" name="preferredContact" value="phone"> Phone call</label>
+        <!-- Text message hidden: the office number (775) 325-4554 can't receive texts. To bring it back, uncomment:
+        <label style="display:flex; align-items:center; gap:6px; font-size:14px; cursor:pointer;"><input type="radio" name="preferredContact" value="text"> Text message</label>
+        -->
+        <label style="display:flex; align-items:center; gap:6px; font-size:14px; cursor:pointer;"><input type="radio" name="preferredContact" value="email"> Email</label>
+      </div>
+      <label class="field-label">Where do you live now?</label>
+      <div class="q-help" style="margin-bottom:8px; font-size:13px;">This can be different from where your case was — it helps us know when and how to reach you.</div>
+      <div class="loc-row">
+        <div class="loc-city">
+          <label class="field-label sub" for="currentCity" id="currentCityLabel">City</label>
+          <input type="text" id="currentCity" name="currentCity" autocomplete="address-level2" placeholder="e.g. Sparks">
+        </div>
+        <div class="loc-state">
+          <label class="field-label sub" for="currentState">State</label>
+          <select id="currentState" name="currentState" autocomplete="address-level1"><option value="Alabama">Alabama</option><option value="Alaska">Alaska</option><option value="Arizona">Arizona</option><option value="Arkansas">Arkansas</option><option value="California">California</option><option value="Colorado">Colorado</option><option value="Connecticut">Connecticut</option><option value="Delaware">Delaware</option><option value="District of Columbia">District of Columbia</option><option value="Florida">Florida</option><option value="Georgia">Georgia</option><option value="Hawaii">Hawaii</option><option value="Idaho">Idaho</option><option value="Illinois">Illinois</option><option value="Indiana">Indiana</option><option value="Iowa">Iowa</option><option value="Kansas">Kansas</option><option value="Kentucky">Kentucky</option><option value="Louisiana">Louisiana</option><option value="Maine">Maine</option><option value="Maryland">Maryland</option><option value="Massachusetts">Massachusetts</option><option value="Michigan">Michigan</option><option value="Minnesota">Minnesota</option><option value="Mississippi">Mississippi</option><option value="Missouri">Missouri</option><option value="Montana">Montana</option><option value="Nebraska">Nebraska</option><option value="Nevada" selected>Nevada</option><option value="New Hampshire">New Hampshire</option><option value="New Jersey">New Jersey</option><option value="New Mexico">New Mexico</option><option value="New York">New York</option><option value="North Carolina">North Carolina</option><option value="North Dakota">North Dakota</option><option value="Ohio">Ohio</option><option value="Oklahoma">Oklahoma</option><option value="Oregon">Oregon</option><option value="Pennsylvania">Pennsylvania</option><option value="Rhode Island">Rhode Island</option><option value="South Carolina">South Carolina</option><option value="South Dakota">South Dakota</option><option value="Tennessee">Tennessee</option><option value="Texas">Texas</option><option value="Utah">Utah</option><option value="Vermont">Vermont</option><option value="Virginia">Virginia</option><option value="Washington">Washington</option><option value="West Virginia">West Virginia</option><option value="Wisconsin">Wisconsin</option><option value="Wyoming">Wyoming</option><option value="Outside the U.S.">Outside the U.S.</option></select>
+        </div>
+      </div>
+      <div id="countryWrap" hidden>
+        <label class="field-label sub" for="currentCountry">Country</label>
+        <select id="currentCountry" name="currentCountry" autocomplete="country-name"><option value="">Select a country…</option><option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="American Samoa">American Samoa</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Anguilla">Anguilla</option><option value="Antigua and Barbuda">Antigua and Barbuda</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><option value="Belgium">Belgium</option><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bermuda">Bermuda</option><option value="Bhutan">Bhutan</option><option value="Bolivia">Bolivia</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="British Virgin Islands">British Virgin Islands</option><option value="Brunei">Brunei</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><option value="Canada">Canada</option><option value="Cape Verde">Cape Verde</option><option value="Caribbean Netherlands">Caribbean Netherlands</option><option value="Cayman Islands">Cayman Islands</option><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="Christmas Island">Christmas Island</option><option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo (DRC)">Congo (DRC)</option><option value="Congo (Republic)">Congo (Republic)</option><option value="Cook Islands">Cook Islands</option><option value="Costa Rica">Costa Rica</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Côte d'Ivoire">Côte d'Ivoire</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominica">Dominica</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Falkland Islands">Falkland Islands</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="French Guiana">French Guiana</option><option value="French Polynesia">French Polynesia</option><option value="Gabon">Gabon</option><option value="Gambia">Gambia</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Gibraltar">Gibraltar</option><option value="Greece">Greece</option><option value="Greenland">Greenland</option><option value="Grenada">Grenada</option><option value="Guadeloupe">Guadeloupe</option><option value="Guam">Guam</option><option value="Guatemala">Guatemala</option><option value="Guernsey">Guernsey</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Honduras">Honduras</option><option value="Hong Kong">Hong Kong</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran">Iran</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Isle of Man">Isle of Man</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jersey">Jersey</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Kiribati">Kiribati</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Laos">Laos</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macau">Macau</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Marshall Islands">Marshall Islands</option><option value="Martinique">Martinique</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mayotte">Mayotte</option><option value="Mexico">Mexico</option><option value="Micronesia">Micronesia</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Montserrat">Montserrat</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nauru">Nauru</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Caledonia">New Caledonia</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Niue">Niue</option><option value="Norfolk Island">Norfolk Island</option><option value="North Korea">North Korea</option><option value="North Macedonia">North Macedonia</option><option value="Northern Mariana Islands">Northern Mariana Islands</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palau">Palau</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Pitcairn">Pitcairn</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Puerto Rico">Puerto Rico</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russia">Russia</option><option value="Rwanda">Rwanda</option><option value="Réunion">Réunion</option><option value="Saint Barthélemy">Saint Barthélemy</option><option value="Saint Helena">Saint Helena</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Saint Lucia">Saint Lucia</option><option value="Saint Martin">Saint Martin</option><option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option><option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Sint Maarten">Sint Maarten</option><option value="Slovakia">Slovakia</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Korea">South Korea</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Svalbard">Svalbard</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syria">Syria</option><option value="Taiwan">Taiwan</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tokelau">Tokelau</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Turks and Caicos Islands">Turks and Caicos Islands</option><option value="Tuvalu">Tuvalu</option><option value="U.S. Virgin Islands">U.S. Virgin Islands</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Vanuatu">Vanuatu</option><option value="Vatican City">Vatican City</option><option value="Venezuela">Venezuela</option><option value="Vietnam">Vietnam</option><option value="Wallis and Futuna">Wallis and Futuna</option><option value="Western Sahara">Western Sahara</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option><option value="Åland Islands">Åland Islands</option></select>
+      </div>
+      <label class="field-label" for="notes">Anything else we should know? (optional)</label>
+      <textarea id="notes" name="notes"></textarea>
+      <!-- Spam trap: hidden from people, bots tend to fill it in -->
+      <div aria-hidden="true" style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;">
+        <label for="website">Leave this field empty</label>
+        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+      <label class="consent">
+        <input type="checkbox" id="consent" name="consent">
+        <span>I agree to be contacted about my record sealing inquiry by phone, text, or email. We will only send messages related to your request — no spam, no marketing emails. Submitting this form does not create an attorney-client relationship, and nothing on this site constitutes legal advice. See our <a href="privacy" target="_blank" rel="noopener">Privacy Policy</a>.</span>
+      </label>
+      <!-- Cloudflare Turnstile spam check: usually invisible; shows a checkbox only if something looks automated -->
+      <div id="turnstileBox" class="ts-box"></div>
+    </div>
+
+    <!-- Result -->
+    <div class="step" data-step="result">
+      <div id="resultOutput"></div>
+    </div>
+
+    <div class="nav-row">
+      <button type="button" class="btn-ghost" id="backBtn">Back</button>
+      <button type="button" class="btn-primary" id="nextBtn">Continue</button>
+    </div>
+  </div>
+
+  <div class="brand-foot"><strong>Nevada Sealing Records</strong></div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <div class="footer-brand-name">Nevada Sealing Records</div>
+      <div class="footer-founder">Founded by Kenneth A. Stover</div>
+      <p class="footer-areas">Serving Reno, Sparks, Lake Tahoe, Carson City and all of Northern Nevada.</p>
+      <p>We handle Nevada record sealing so old charges stop costing you opportunities.</p>
+      <div class="footer-contact">
+        <a class="footer-phone" href="tel:+17753254554">☎ (775) 325-4554</a>
+        <a href="mailto:clarissa@kenstoverlaw.com">✉ clarissa@kenstoverlaw.com</a>
+      </div>
+    </div>
+    <div>
+      <p class="footer-col-label">Navigate</p>
+      <ul class="footer-links">
+            <li><a href="faq">FAQ</a></li>
+        <li><a href="pricing">Pricing</a></li>
+        <li><a href="kenneth-a-stover">About Ken Stover</a></li>
+        <li><a href="privacy">Privacy Policy</a></li>
+        <li><a href="eligibility" class="footer-cta">Check Eligibility →</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <p class="footer-copyright">© 2026 Nevada Sealing Records. All rights reserved.</p>
+    </div>
+    <p class="footer-disclaimer">The information on this website is for general informational purposes only and does not constitute legal advice. Submitting a form or sending an email does not create an attorney-client relationship. Results vary based on individual circumstances.</p>
+  </div>
+</footer>
+
+<script>
+// ── CHARGE DATA (from the v8 charge sheet, 284 charges) ────────────────────
+// n = name, r = NRS citation, c = offense class, w = waiting period as shown,
+// y = waiting period in years, s = sealable (YES/NO),
+// x = 1: special case, staff confirm the waiting period,
+// xd = date the law for this charge changed (from the sheet's notes). The form
+//      doesn't ask when the offense happened: everyone gets the charge's current
+//      waiting period, and staff check older offenses during the records review.
+// Charge names here leave out the sheet's "(Offense Committed ...)" labels; the
+// older-law rows are left off.
+const CHARGES = [{"n":"DUI — Third Offense Within 7 Years (Felony)","r":"NRS 484C.400(1)(c)","c":"Cat B Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Felony DUI — Causing Death or Substantial Bodily Harm","r":"NRS 484C.430","c":"Cat B Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Operating Watercraft Under the Influence — Felony","r":"NRS 488.410; NRS 488.427; NRS 488.420; NRS 488.425","c":"Cat A or B Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Sexual Assault (Rape / Felony)","r":"NRS 200.366","c":"Cat A Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Statutory Sexual Seduction — Felony (Offender 21+, Victim 14–15)","r":"NRS 200.368(1)","c":"Cat B Felony","w":"CANNOT BE SEALED","s":"NO","xd":"2015-10-01"},{"n":"Statutory Sexual Seduction — Gross Misdemeanor (Offender 18–20, Victim 14–15, No Prior Sexual Offense)","r":"NRS 200.368(2); NRS 200.364(10)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2,"xd":"2015-10-01"},{"n":"Statutory Sexual Seduction — Felony (Offender 18–20 With a Prior Sexual Offense)","r":"NRS 200.368(3); NRS 200.364(10)","c":"Cat D Felony","w":"CANNOT BE SEALED","s":"NO","xd":"2015-10-01"},{"n":"Battery with Intent to Commit Sexual Assault","r":"NRS 200.400(4)","c":"Cat A Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Battery with Intent to Commit Mayhem, Robbery, or Grand Larceny","r":"NRS 200.400(2)","c":"Cat B Felony","s":"YES","w":"10 years","y":10},{"n":"Battery with Intent to Kill","r":"NRS 200.400(3)","c":"Cat B Felony","s":"YES","w":"10 years","y":10},{"n":"Administering a Drug to Aid a Felony (Underlying Felony Not a Sexual Offense)","r":"NRS 200.405","c":"Cat B Felony","s":"YES","w":"10 years","y":10},{"n":"Administering a Drug to Aid a Sexual Offense","r":"NRS 200.405; NRS 179.245(10)(b)(5)","c":"Cat B Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Administering a Controlled Substance Without the Victim's Knowledge to Aid a Crime of Violence (Underlying Crime Not a Sexual Offense)","r":"NRS 200.408","c":"Cat B Felony","s":"YES","w":"10 years","y":10},{"n":"Administering a Controlled Substance Without the Victim's Knowledge to Aid a Sexual Offense","r":"NRS 200.408; NRS 179.245(10)(b)(6)","c":"Cat B Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Child Abuse / Neglect Involving Sexual Abuse or Exploitation","r":"NRS 200.508; NRS 179.245(10)(b)(7)","c":"Cat A, B or C Felony or Gross Misdemeanor","w":"CANNOT BE SEALED","s":"NO"},{"n":"Child Sexual Abuse Material or Sexual Performance of a Minor","r":"NRS 200.710–200.730","c":"Cat A, B or C Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Incest","r":"NRS 201.180","c":"Cat A Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Open or Gross Lewdness — First Offense (Gross Misdemeanor)","r":"NRS 201.210(1)(a)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Open or Gross Lewdness — Felony (In Front of a Child or Vulnerable Person, or After a Prior Sexual Offense)","r":"NRS 201.210(1)(b)–(c)","c":"Cat D Felony","w":"CANNOT BE SEALED","s":"NO","xd":"2015-10-01"},{"n":"Open or Gross Lewdness — Second or Subsequent Offense (Felony)","r":"NRS 201.210(1)(b)","c":"Cat D Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Indecent Exposure — First Offense (Gross Misdemeanor)","r":"NRS 201.220(1)(a)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Indecent Exposure — Felony (In Front of a Child or Vulnerable Person, or After a Prior Sexual Offense)","r":"NRS 201.220(1)(b)–(c)","c":"Cat D Felony","w":"CANNOT BE SEALED","s":"NO","xd":"2015-10-01"},{"n":"Indecent Exposure — Second or Subsequent Offense (Felony)","r":"NRS 201.220(1)(b)","c":"Cat D Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Lewdness with a Child Under 14","r":"NRS 201.230(2)","c":"Cat A Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Lewdness with a Child 14 or 15 Years Old","r":"NRS 201.230(3)","c":"Cat B Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Lewdness with a Child — After a Prior Child Sexual Offense","r":"NRS 201.230(4)","c":"Cat A Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Sexual Penetration of a Deceased Person","r":"NRS 201.450","c":"Cat A Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Sexual Conduct Between a School Employee or Volunteer and a Pupil","r":"NRS 201.540","c":"Cat C Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Sexual Conduct Between a College or University Employee and a Student","r":"NRS 201.550","c":"Cat C Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Luring a Child or Person with Mental Illness — Felony (Sexual Intent or Harmful Material)","r":"NRS 201.560(4)(a)–(b); NRS 201.560(5)(a)–(b)","c":"Cat B or C Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Luring a Child or Person with Mental Illness — Gross Misdemeanor","r":"NRS 201.560(4)(c); NRS 201.560(5)(c)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Sex Trafficking — Child Victim (Under 18)","r":"NRS 201.300(2)(a); NRS 201.300(2)(b)(2)","c":"Cat A Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Sex Trafficking — Adult Victim","r":"NRS 201.300(2)(a)(2)–(5); NRS 201.300(2)(b)(1)","c":"Cat B Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Soliciting a Child for Prostitution","r":"NRS 201.354(2); NRS 201.354(5)","c":"Cat B, C or D Felony","s":"YES","w":"5 years","y":5},{"n":"Kidnapping a Child (Victim Under 18, Not by a Parent or Guardian)","r":"NRS 200.310–200.340; NRS 179D.0357(1)","c":"Cat A or B Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"False Imprisonment of a Child (Victim Under 18, Not by a Parent or Guardian)","r":"NRS 200.460; NRS 179D.0357(2)","c":"Cat B Felony or Gross Misdemeanor","w":"CANNOT BE SEALED","s":"NO"},{"n":"Involuntary Servitude of a Child (Not by a Parent or Guardian)","r":"NRS 200.4631","c":"Cat A Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Murder — First Degree (Not Committed During an Actual or Attempted Sexual Assault, or Sexual Abuse or Molestation of a Child Under 14)","r":"NRS 200.030(1)","c":"Cat A Felony","s":"YES","w":"10 years","y":10},{"n":"Murder — First Degree, Committed During an Actual or Attempted Sexual Assault, or Sexual Abuse or Molestation of a Child Under 14","r":"NRS 200.030(1)(b); NRS 179.245(10)(b)(1)","c":"Cat A Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Murder — Second Degree","r":"NRS 200.030(2)","c":"Cat A Felony","s":"YES","w":"10 years","y":10},{"n":"Vehicular Homicide (DUI Death After 3+ Prior DUI Offenses)","r":"NRS 484C.130; NRS 484C.440","c":"Cat A Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Kidnapping — First Degree (Adult Victim, or Child Taken by Own Parent or Guardian)","r":"NRS 200.310(1)","c":"Cat A Felony","s":"YES","w":"10 years","y":10},{"n":"High-Level Drug Trafficking — 400 Grams or More (Schedule I/II, Not Marijuana)","r":"NRS 453.3385(1)(b)","c":"Cat A Felony","s":"YES","w":"10 years","y":10,"xd":"2020-07-01"},{"n":"Marijuana Trafficking — 5,000 Pounds or More (or 100+ Pounds Concentrated Cannabis)","r":"NRS 453.339(1)(c)","c":"Cat A Felony","s":"YES","w":"10 years","y":10},{"n":"Marijuana Trafficking — 1,000 to 4,999 Pounds (or 20 to 99 Pounds Concentrated Cannabis)","r":"NRS 453.339(1)(b)","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Marijuana Trafficking — 50 to 999 Pounds (or 1 to 19 Pounds Concentrated Cannabis)","r":"NRS 453.339(1)(a)","c":"Cat C Felony","s":"YES","w":"5 years","y":5},{"n":"Arson — First Degree (Dwelling or Other Structure, or Occupied Personal Property)","r":"NRS 205.010","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Mayhem","r":"NRS 200.280","c":"Cat B Felony","s":"YES","w":"10 years","y":10},{"n":"Administering Poison with Intent to Cause Death","r":"NRS 200.390","c":"Cat A Felony","s":"YES","w":"10 years","y":10},{"n":"Robbery","r":"NRS 200.380","c":"Cat B Felony","s":"YES","w":"10 years","y":10},{"n":"Robbery with Use of a Deadly Weapon","r":"NRS 200.380 + NRS 193.165","c":"Cat B Felony","s":"YES","w":"10 years","y":10},{"n":"Voluntary Manslaughter","r":"NRS 200.050; NRS 200.080","c":"Cat B Felony","s":"YES","w":"10 years","y":10},{"n":"Assault with a Deadly Weapon","r":"NRS 200.471(2)(b)","c":"Cat B Felony","s":"YES","w":"10 years","y":10},{"n":"Battery with a Deadly Weapon","r":"NRS 200.481(2)(e)","c":"Cat B Felony","s":"YES","w":"10 years","y":10},{"n":"Kidnapping — Second Degree (Adult Victim, or Child Taken by Own Parent or Guardian)","r":"NRS 200.310(2); NRS 200.330","c":"Cat B Felony","s":"YES","w":"10 years","y":10},{"n":"Intentional Transmission of HIV","r":"NRS 201.205 (repealed — no longer in the NRS; older convictions only)","c":"Cat B Felony","s":"YES","w":"10 years","y":10},{"n":"Residential Burglary","r":"NRS 205.060(2)(d)","c":"Cat B Felony","s":"YES","w":"10 years","y":10,"xd":"2020-07-01"},{"n":"Burglary of a Structure","r":"NRS 205.060(2)(b)","c":"Cat D Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Burglary of a Motor Vehicle — First Offense, No Weapon","r":"NRS 205.060(2)(a)(1)","c":"Cat E Felony","s":"YES","w":"2 years","y":2,"xd":"2020-07-01"},{"n":"Burglary of a Motor Vehicle — Second or Subsequent Offense","r":"NRS 205.060(2)(a)(2)","c":"Cat D Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Possession of Burglary Tools","r":"NRS 205.080","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Burglary of a Business","r":"NRS 205.060(2)(c)","c":"Cat C Felony","s":"YES","w":"10 years","y":10,"xd":"2020-07-01"},{"n":"Residential Burglary While Possessing a Firearm or Deadly Weapon","r":"NRS 205.060(1)(a); NRS 205.060(5)","c":"Cat B Felony","s":"YES","w":"10 years","y":10,"xd":"2020-07-01"},{"n":"Burglary of a Business While Possessing a Firearm or Deadly Weapon","r":"NRS 205.060(1)(b); NRS 205.060(5)","c":"Cat B Felony","s":"YES","w":"10 years","y":10,"xd":"2020-07-01"},{"n":"Burglary of a Structure or Motor Vehicle While Possessing a Firearm or Deadly Weapon","r":"NRS 205.060(1)(c)–(d); NRS 205.060(5)","c":"Cat B Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Home Invasion While Possessing a Firearm or Deadly Weapon","r":"NRS 205.067(4)","c":"Cat B Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Home Invasion — No Firearm or Deadly Weapon","r":"NRS 205.067(2)","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Arson — Second Degree (Abandoned Building or Structure)","r":"NRS 205.015","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Arson — Third Degree (Unoccupied Personal Property or Vegetation)","r":"NRS 205.020","c":"Cat D Felony","s":"YES","w":"5 years","y":5},{"n":"Possession of Firearm by Ex-Felon / Prohibited Person","r":"NRS 202.360(1)–(2)","c":"Cat B or D Felony","s":"YES","w":"5 years","y":5},{"n":"Firearm Use or Possession During a Drug Sale or Trafficking Offense","r":"NRS 202.360(3)","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Grand Larceny of a Firearm","r":"NRS 205.226","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Grand Larceny — $100,000 or More","r":"NRS 205.222(2)(d)","c":"Cat B Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Embezzlement — $100,000 or More","r":"NRS 205.300; NRS 205.222(2)(d)","c":"Cat B Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Identity Theft","r":"NRS 205.463(1)","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Identity Theft — Aggravated (Older or Vulnerable Victim, 5+ Victims, $3,000+ Loss, or to Avoid Prosecution for a Category A or B Felony)","r":"NRS 205.463(3)","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Reckless Driving Causing Death or Substantial Bodily Harm","r":"NRS 484B.653(9)","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Hit and Run — Crash Involving Injury or Death","r":"NRS 484E.010(3)","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Low-Level Drug Trafficking — 100 to Under 400 Grams (Schedule I/II, Not Marijuana)","r":"NRS 453.3385(1)(a)","c":"Cat B Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Sale or Transport of a Controlled Substance — Schedule I/II","r":"NRS 453.321(2)","c":"Cat B or C Felony","s":"YES","w":"5 years","y":5},{"n":"Sale or Transport of a Controlled Substance — Schedule III–V","r":"NRS 453.321(4)","c":"Cat B, C or D Felony","s":"YES","w":"5 years","y":5},{"n":"Stalking by Electronic Publication That Increases the Risk of Harm (Doxxing)","r":"NRS 200.575(4)","c":"Cat C Felony","s":"YES","w":"5 years","y":5},{"n":"Harassment — Second or Subsequent Offense (Gross Misdemeanor)","r":"NRS 200.571(2)(b)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Child Abuse / Neglect — Substantial Bodily or Mental Harm (No Sexual Abuse or Exploitation)","r":"NRS 200.508(1)(a)(2)","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Conspiracy to Commit Robbery","r":"NRS 199.480(1)(a)","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Coercion — With Physical Force or Immediate Threat of Physical Force","r":"NRS 207.190(2)(a)","c":"Cat B Felony","s":"YES","w":"10 years","y":10},{"n":"Coercion — Without Physical Force or Immediate Threat of Physical Force","r":"NRS 207.190(2)(b)","c":"Misdemeanor","s":"YES","w":"Special case","x":1},{"n":"Battery Causing Substantial Bodily Harm (Non-Domestic, No Weapon)","r":"NRS 200.481(2)(b)","c":"Cat C Felony","s":"YES","w":"10 years","y":10},{"n":"Battery on a Protected Person (Officer, Health Care Worker, etc.) — Substantial Bodily Harm or Strangulation","r":"NRS 200.481(2)(c)","c":"Cat B Felony","s":"YES","w":"10 years","y":10},{"n":"Battery by Strangulation (Non-Domestic, No Weapon)","r":"NRS 200.481(2)(b)","c":"Cat C Felony","s":"YES","w":"10 years","y":10},{"n":"Domestic Battery by Strangulation","r":"NRS 200.485(2)","c":"Cat C Felony","s":"YES","w":"10 years","y":10},{"n":"Domestic Battery Causing Substantial Bodily Harm","r":"NRS 200.485(5)","c":"Cat B Felony","s":"YES","w":"10 years","y":10},{"n":"Domestic Battery — Pregnant Victim, First Offense (Gross Misdemeanor)","r":"NRS 200.485(4)(a)","c":"Gross Misdemeanor","s":"YES","w":"7 years","y":7,"xd":"2019-07-01"},{"n":"Domestic Battery — Pregnant Victim, Second or Subsequent Offense (Felony)","r":"NRS 200.485(4)(b)","c":"Cat B Felony","s":"YES","w":"Special case","x":1},{"n":"Grand Larceny — $25,000 to $99,999","r":"NRS 205.222(2)(c)","c":"Cat B Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Auto Theft / Grand Larceny of Motor Vehicle","r":"NRS 205.228","c":"Cat B or C Felony","s":"YES","w":"5 years","y":5},{"n":"Embezzlement — $25,000 to $99,999","r":"NRS 205.300; NRS 205.222(2)(c)","c":"Cat B Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Identity Theft — To Avoid or Delay Prosecution","r":"NRS 205.463(2)","c":"Cat C Felony","s":"YES","w":"5 years","y":5},{"n":"Receiving / Possessing Stolen Property — $25,000 to $99,999 or a Firearm","r":"NRS 205.275(2)(d)","c":"Cat B Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Receiving / Possessing Stolen Property — $100,000 or More","r":"NRS 205.275(2)(e)","c":"Cat B Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Possession, Receipt or Transfer of a Stolen Vehicle","r":"NRS 205.273","c":"Cat C Felony","s":"YES","w":"5 years","y":5},{"n":"Unlawful Taking of a Vehicle (Joyriding)","r":"NRS 205.2715","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Stalking a Child Under 16 (Offender 5+ Years Older) — First Offense","r":"NRS 200.575(2)(a)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2,"xd":"2019-07-01"},{"n":"Stalking a Child Under 16 (Offender 5+ Years Older) — Second Offense","r":"NRS 200.575(2)(b)","c":"Cat C Felony","s":"YES","w":"5 years","y":5,"xd":"2019-07-01"},{"n":"Stalking a Child Under 16 (Offender 5+ Years Older) — Third or Subsequent Offense","r":"NRS 200.575(2)(c)","c":"Cat B Felony","s":"YES","w":"5 years","y":5,"xd":"2019-07-01"},{"n":"Aggravated Stalking (Threat of Death or Substantial Bodily Harm)","r":"NRS 200.575(3)","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Domestic Battery — Third Offense Within 7 Years (Felony)","r":"NRS 200.485(1)(c)","c":"Cat B Felony","s":"YES","w":"Special case","x":1},{"n":"Domestic Battery — After a Prior Felony Domestic Violence Conviction or Prior Domestic Battery With a Deadly Weapon","r":"NRS 200.485(3)","c":"Cat B Felony","s":"YES","w":"Special case","x":1},{"n":"Child Abuse / Neglect — No Substantial Harm (No Sexual Abuse or Exploitation)","r":"NRS 200.508(1)(b)","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Child Abuse / Neglect — Caregiver Permitted It, No Substantial Harm, First Offense (No Sexual Abuse or Exploitation) (Gross Misdemeanor)","r":"NRS 200.508(2)(b)(1)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Child Abuse / Neglect — Caregiver Permitted It, With Substantial Harm or After a Prior Conviction (No Sexual Abuse or Exploitation) (Felony)","r":"NRS 200.508(2)(a)(2); NRS 200.508(2)(b)(2)","c":"Cat B or C Felony","s":"YES","w":"5 years","y":5},{"n":"Abuse of an Older or Vulnerable Person — Convicted as a Gross Misdemeanor","r":"NRS 200.5099(1)(a)(2)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Abuse of an Older or Vulnerable Person — Convicted as a Felony","r":"NRS 200.5099(1)(a)(1); NRS 200.5099(1)(b)","c":"Cat B or C Felony","s":"YES","w":"5 years","y":5},{"n":"Neglect of an Older or Vulnerable Person — Convicted as a Gross Misdemeanor","r":"NRS 200.5099(2)(a)(2)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Neglect of an Older or Vulnerable Person — Convicted as a Felony","r":"NRS 200.5099(2)(a)(1); NRS 200.5099(2)(b)","c":"Cat B or C Felony","s":"YES","w":"5 years","y":5},{"n":"Abuse or Neglect of an Older or Vulnerable Person — Substantial Harm or Death","r":"NRS 200.5099(6)–(7)","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Exploitation of an Older or Vulnerable Person — Convicted as a Gross Misdemeanor","r":"NRS 200.5099(3)(a)(1)(II); NRS 200.5099(4)(a)(2)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Exploitation of an Older or Vulnerable Person — Convicted as a Felony","r":"NRS 200.5099(3); NRS 200.5099(4)","c":"Cat B or C Felony","s":"YES","w":"5 years","y":5},{"n":"Drug Sale or Manufacture Near a School or Park (Sentence Enhancement)","r":"NRS 453.321 or NRS 453.322; NRS 453.3345","c":"Same as the base offense","s":"YES","w":"5 years","y":5},{"n":"Insurance Fraud","r":"NRS 686A.291","c":"Cat D Felony","s":"YES","w":"5 years","y":5},{"n":"Mortgage Lending Fraud","r":"NRS 205.372","c":"Cat B or C Felony","s":"YES","w":"5 years","y":5},{"n":"Possession of a Controlled Substance for Sale — Schedule I/II","r":"NRS 453.337","c":"Cat B, C or D Felony","s":"YES","w":"5 years","y":5},{"n":"Involuntary Manslaughter","r":"NRS 200.070; NRS 200.090","c":"Cat D Felony","s":"YES","w":"5 years","y":5},{"n":"Battery on a Protected Person (Officer, Health Care Worker, etc.) — No Substantial Bodily Harm (Gross Misdemeanor)","r":"NRS 200.481(2)(d)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Battery by a Probationer, Prisoner or Parolee — No Deadly Weapon","r":"NRS 200.481(2)(f)","c":"Cat B Felony","s":"YES","w":"Special case","x":1},{"n":"Battery by a Probationer, Prisoner or Parolee — With a Deadly Weapon","r":"NRS 200.481(2)(g)","c":"Cat B Felony","s":"YES","w":"10 years","y":10},{"n":"False Imprisonment — With a Deadly Weapon, by a Prisoner, to Avoid Arrest, or Using the Victim as a Shield (Adult Victim or Own Child)","r":"NRS 200.460(3)–(5)","c":"Cat B Felony","s":"YES","w":"Special case","x":1},{"n":"Violation of Extended Domestic Violence Protective Order — Third or Subsequent Violation","r":"NRS 33.100(2)(c)","c":"Cat D Felony","s":"YES","w":"5 years","y":5,"xd":"2019-07-01"},{"n":"Violation of Extended Domestic Violence Protective Order — Second Violation","r":"NRS 33.100(2)(b)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2,"xd":"2019-07-01"},{"n":"Grand Larceny — $5,000 to $24,999","r":"NRS 205.222(2)(b)","c":"Cat C Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Embezzlement — $5,000 to $24,999","r":"NRS 205.300; NRS 205.222(2)(b)","c":"Cat C Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"False Identity Documents or Information — Selling or Transferring, or Possessing to Commit Forgery, Fraud, Credit-Card or Identity Crimes (Felony)","r":"NRS 205.465(2)–(3)","c":"Cat B or C Felony","s":"YES","w":"5 years","y":5},{"n":"False Identity Documents or Information — Possession Only or to Commit Other Crimes (Category E Felony)","r":"NRS 205.465(4)","c":"Cat E Felony","s":"YES","w":"2 years","y":2},{"n":"False Identity Documents — Possession Only for False Proof of Age (Misdemeanor)","r":"NRS 205.465(4)","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Receiving / Possessing Stolen Property — $5,000 to $24,999","r":"NRS 205.275(2)(c)","c":"Cat C Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Forgery of a Document","r":"NRS 205.090","c":"Cat D Felony","s":"YES","w":"5 years","y":5},{"n":"Obtaining Money by False Pretenses — $25,000 to $99,999","r":"NRS 205.380(1)(d)","c":"Cat B Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Obtaining Money by False Pretenses — $100,000 or More","r":"NRS 205.380(1)(e)","c":"Cat B Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Obtaining Money by False Pretenses — $5,000 to $24,999","r":"NRS 205.380(1)(c)","c":"Cat C Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Fraudulent Use of a Credit or Debit Card (Felony)","r":"NRS 205.760(1); NRS 205.760(2)(a)","c":"Cat D Felony","s":"YES","w":"5 years","y":5},{"n":"Fraudulent Use of Own Revoked or Overdrawn Card — Under $100 (Misdemeanor)","r":"NRS 205.760(2)(b)","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Stealing or Possessing a Credit or Debit Card Without Consent","r":"NRS 205.690","c":"Cat D Felony","s":"YES","w":"5 years","y":5},{"n":"Bad Check — Any Amount After 3 Prior Misdemeanor Bad Check Convictions","r":"NRS 205.130(2)","c":"Cat D Felony","s":"YES","w":"5 years","y":5},{"n":"Public Assistance Fraud — $100 or More (Felony)","r":"NRS 422A.700(1)","c":"Cat E Felony","s":"YES","w":"2 years","y":2},{"n":"Medicaid Fraud — False Claims, Kickbacks or Records Violations","r":"NRS 422.540–422.570","c":"Cat D Felony, Gross Misdemeanor or Misdemeanor","s":"YES","w":"7 years","y":7},{"n":"False or Fraudulent Sales Tax Return","r":"NRS 372.760","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Vandalism — $5,000 or More, or Impairing Public Services","r":"NRS 206.310; NRS 193.155(1)","c":"Cat C Felony","s":"YES","w":"5 years","y":5},{"n":"Graffiti — Under $250","r":"NRS 206.330(1)(a)","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Graffiti — $250 to $4,999","r":"NRS 206.330(1)(b)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Graffiti — $5,000 or More, or Impairing Public Services","r":"NRS 206.330(1)(c)","c":"Cat E Felony","s":"YES","w":"2 years","y":2},{"n":"Graffiti — Protected Site","r":"NRS 206.330(1)(d)","c":"Cat D Felony","s":"YES","w":"5 years","y":5},{"n":"Graffiti — After 2+ Prior Convictions or a Prior Felony Graffiti Conviction","r":"NRS 206.330(2)","c":"Cat D Felony","s":"YES","w":"5 years","y":5},{"n":"Carrying a Concealed Firearm or Other Dangerous Weapon Without a Permit","r":"NRS 202.350(1)(d)(3); NRS 202.350(2)(b)","c":"Cat C Felony","s":"YES","w":"5 years","y":5},{"n":"Possession of Firearm with Altered Serial Number","r":"NRS 202.277(2)","c":"Cat D Felony","s":"YES","w":"5 years","y":5},{"n":"Altering, Removing or Obliterating a Firearm's Serial Number","r":"NRS 202.277(1)","c":"Cat C Felony","s":"YES","w":"5 years","y":5},{"n":"Discharging a Firearm From a Structure or Vehicle — In a Designated Populated Area (Felony)","r":"NRS 202.287(1)(b)","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Discharging a Firearm From a Structure or Vehicle — Outside a Designated Populated Area (Misdemeanor)","r":"NRS 202.287(1)(a)","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Drawing a Deadly Weapon in a Threatening Manner (Brandishing)","r":"NRS 202.320","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Possession of a Dangerous Weapon on School or Child Care Property","r":"NRS 202.265","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Possession of a Firearm While Under the Influence","r":"NRS 202.257","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Carrying Concealed Machete Without Permit — Second or Subsequent Offense","r":"NRS 202.350(2)(a)(2)","c":"Cat D Felony","s":"YES","w":"5 years","y":5},{"n":"Accessory After the Fact to a Felony (Not a Close Relative of the Offender)","r":"NRS 195.030(1); NRS 195.040(1)","c":"Cat C Felony","s":"YES","w":"5 years","y":5},{"n":"Accessory After the Fact to a Felony — Close Relative of the Offender (Gross Misdemeanor)","r":"NRS 195.030(1); NRS 195.040(1)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Conspiracy — Category B Felony (Murder, Robbery, Sexual Assault, 1st/2nd-Degree Kidnapping or Arson, Involuntary Servitude, Buying or Selling a Person, Human Trafficking, Sex Trafficking of an Adult, Facilitating Sex Trafficking, or Identity Theft)","r":"NRS 199.480(1)","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Conspiracy — Gross Misdemeanor","r":"NRS 199.480(3)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Perjury / Subornation of Perjury","r":"NRS 199.120","c":"Cat D Felony","s":"YES","w":"5 years","y":5},{"n":"Preventing or Dissuading a Victim or Witness From Reporting a Crime or Pursuing a Prosecution or Arrest","r":"NRS 199.305","c":"Cat D Felony","s":"YES","w":"5 years","y":5},{"n":"Preventing a Witness From Testifying — With Force or Immediate Threat of Force (Felony)","r":"NRS 199.230(1)","c":"Cat D Felony","s":"YES","w":"5 years","y":5},{"n":"Preventing a Witness From Testifying — No Force or Immediate Threat of Force (Gross Misdemeanor)","r":"NRS 199.230(2)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Failure to Appear — Felony Charge","r":"NRS 199.335(2)(a)","c":"Cat D Felony","s":"YES","w":"5 years","y":5},{"n":"Failure to Appear — Gross Misdemeanor Charge","r":"NRS 199.335(2)(b)(1)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Failure to Appear — Misdemeanor Charge","r":"NRS 199.335(2)(c)(1)","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Failure to Appear After Leaving Nevada to Avoid Prosecution (Gross Misdemeanor or Misdemeanor Charge)","r":"NRS 199.335(2)(b)(2); NRS 199.335(2)(c)(2)","c":"Cat D Felony","s":"YES","w":"5 years","y":5},{"n":"Escape — Prisoner Held on a Felony","r":"NRS 212.090(1)","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Escape — Prisoner Held on a Gross Misdemeanor or Misdemeanor, With a Dangerous Weapon (Felony)","r":"NRS 212.090(2)(a)","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Escape — Prisoner Held on a Gross Misdemeanor or Misdemeanor, No Weapon (Gross Misdemeanor)","r":"NRS 212.090(2)(b)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Furnishing a Weapon or Controlled Substance to a State Prisoner (Felony)","r":"NRS 212.160(1)(a)","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Furnishing an Intoxicant to a State Prisoner (Gross Misdemeanor)","r":"NRS 212.160(1)(b)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Compounding a Felony","r":"NRS 199.290(1)(a)","c":"Cat D Felony","s":"YES","w":"5 years","y":5},{"n":"Compounding a Gross Misdemeanor or Misdemeanor","r":"NRS 199.290(1)(b)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Unlawful Manufacture or Compounding of a Controlled Substance (Other Than Marijuana)","r":"NRS 453.322(1)(a)","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Possession of a Controlled Substance — First Offense, Fewer Than 2 Prior Drug Convictions (Under 14 Grams Schedule I/II or Under 28 Grams Schedule III–V)","r":"NRS 453.336(2)(a)","c":"Cat E Felony","s":"YES","w":"2 years","y":2},{"n":"Possession of a Controlled Substance — Second Offense, Only 1 Prior Drug Conviction (Under 14 Grams Schedule I/II or Under 28 Grams Schedule III–V)","r":"NRS 453.336(2)(a)","c":"Cat E Felony","s":"YES","w":"2 years","y":2,"xd":"2020-07-01"},{"n":"Possession of a Controlled Substance — Third or Later Offense, or After 2+ Prior Drug Convictions (Under 14 Grams Schedule I/II or Under 28 Grams Schedule III–V)","r":"NRS 453.336(2)(b)","c":"Cat D Felony","s":"YES","w":"5 years","y":5},{"n":"Low-Level Possession of a Controlled Substance (14 to Under 28 Grams Schedule I/II, or 28 to Under 200 Grams Schedule III–V)","r":"NRS 453.336(2)(c)","c":"Cat C Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Mid-Level Possession of a Controlled Substance (28 to Under 42 Grams Schedule I/II, or 200 Grams or More Schedule III–V)","r":"NRS 453.336(2)(d)","c":"Cat B Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"High-Level Possession of a Controlled Substance (42 to Under 100 Grams Schedule I/II)","r":"NRS 453.336(2)(e)","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Possession of Marijuana — Over 1 Ounce to Under 50 Pounds (or Over 1/8 Ounce to Under 1 Pound Concentrated Cannabis)","r":"NRS 453.336(5)","c":"Cat E Felony","s":"YES","w":"2 years","y":2},{"n":"Opening or Maintaining a Place for Unlawful Drug Sale or Use","r":"NRS 453.316","c":"Cat B or C Felony","s":"YES","w":"5 years","y":5},{"n":"Grand Larceny — $1,200 to $4,999","r":"NRS 205.220(1); NRS 205.222(2)(a)","c":"Cat D Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Receiving / Possessing Stolen Property — $1,200 to $4,999","r":"NRS 205.275(2)(b)","c":"Cat D Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Receiving / Possessing Stolen Property — Under $1,200, Not a Firearm","r":"NRS 205.275(2)(a)","c":"Misdemeanor","s":"YES","w":"1 year","y":1,"xd":"2020-07-01"},{"n":"Embezzlement — $1,200 to $4,999","r":"NRS 205.300; NRS 205.220(1); NRS 205.222(2)(a)","c":"Cat D Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Obtaining Money by False Pretenses — $1,200 to $4,999","r":"NRS 205.380(1)(b)","c":"Cat D Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Bad Check — $1,200 or More","r":"NRS 205.130(1)","c":"Cat D Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Bad Check — Wage Check Over $1,200","r":"NRS 205.130(3)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2,"xd":"2020-07-01"},{"n":"Vandalism — $250 to $4,999","r":"NRS 206.310; NRS 193.155(2)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Trespass on Public Utility Infrastructure — $500 or More (Felony)","r":"NRS 704.800(2)(a); NRS 704.800(3)(a)","c":"Cat D Felony","s":"YES","w":"5 years","y":5},{"n":"Trespass on Public Utility Infrastructure — Under $500 (Misdemeanor)","r":"NRS 704.800(2)(a); NRS 704.800(3)(b)","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Malicious Trespass on Public School Grounds — With a Dangerous Weapon (Gross Misdemeanor)","r":"NRS 393.410(1)(d); NRS 393.410(3)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Malicious Trespass on Public School Grounds — No Weapon, Damage Under $250 (Misdemeanor)","r":"NRS 393.410(1)(d); NRS 393.410(2); NRS 193.155(3)–(4)","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Malicious Trespass on Public School Grounds — No Weapon, Damage $250 to Under $5,000 (Gross Misdemeanor)","r":"NRS 393.410(1)(d); NRS 393.410(2); NRS 193.155(2)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Malicious Trespass on Public School Grounds — No Weapon, Damage $5,000 or More (Felony)","r":"NRS 393.410(1)(d); NRS 393.410(2); NRS 193.155(1)","c":"Cat C Felony","s":"YES","w":"5 years","y":5},{"n":"False Imprisonment — Gross Misdemeanor (Adult Victim or Own Child)","r":"NRS 200.460(2)","c":"Gross Misdemeanor","s":"YES","w":"Special case","x":1},{"n":"Resisting a Public Officer — Dangerous Weapon Other Than a Firearm (Used, or Taken From the Officer)","r":"NRS 199.280(2)","c":"Cat D Felony","s":"YES","w":"5 years","y":5},{"n":"Resisting a Public Officer — Firearm (Used, or Taken From the Officer)","r":"NRS 199.280(1)","c":"Cat C Felony","s":"YES","w":"5 years","y":5},{"n":"Interfering with an Executive or Administrative Officer by Threat, Force or Violence","r":"NRS 197.090","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Impersonating a Public Officer or Police Officer","r":"NRS 199.430","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Carrying Concealed Machete Without Permit — First Offense","r":"NRS 202.350(2)(a)(1)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Operating Gaming Without a License","r":"NRS 463.160(1); NRS 463.360(3)","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Battery — Simple, Non-Domestic (Misdemeanor)","r":"NRS 200.481(2)(a)","c":"Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Assault on a Protected Person (Officer, Health Care Worker, etc.) — No Deadly Weapon (Gross Misdemeanor)","r":"NRS 200.471(2)(c)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Assault on a Protected Person (Officer, Health Care Worker, etc.) — With a Deadly Weapon (Felony)","r":"NRS 200.471(2)(c)","c":"Cat B Felony","s":"YES","w":"10 years","y":10},{"n":"Assault on a Protected Person by a Probationer, Prisoner or Parolee (Felony)","r":"NRS 200.471(2)(d)","c":"Cat B or D Felony","s":"YES","w":"Special case","x":1},{"n":"Harassment — First Offense (Misdemeanor)","r":"NRS 200.571(2)(a)","c":"Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Stalking — First Offense (Misdemeanor)","r":"NRS 200.575(1)(a)","c":"Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Stalking — Second Offense (Gross Misdemeanor)","r":"NRS 200.575(1)(b)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Stalking — Third or Subsequent Offense (Felony)","r":"NRS 200.575(1)(c)","c":"Cat C Felony","s":"YES","w":"5 years","y":5,"xd":"2019-07-01"},{"n":"Violation of Domestic Violence Protective Order — Temporary Order or First Extended-Order Violation (Misdemeanor)","r":"NRS 33.100(1); NRS 33.100(2)(a)","c":"Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Violation of Stalking or Harassment Protective Order — Temporary Order (Gross Misdemeanor)","r":"NRS 200.591(5)(a)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Violation of Stalking or Harassment Protective Order — Extended Order (Felony)","r":"NRS 200.591(5)(b)","c":"Cat C Felony","s":"YES","w":"5 years","y":5},{"n":"DUI — First Offense Within 7 Years (Misdemeanor)","r":"NRS 484C.400(1)(a)","c":"Misdemeanor","s":"YES","w":"7 years","y":7},{"n":"DUI — Second Offense Within 7 Years, or Third Offense Reduced After Treatment (Misdemeanor)","r":"NRS 484C.400(1)(b)","c":"Misdemeanor","s":"YES","w":"7 years","y":7},{"n":"DUI — Drugs, Inhalants or Prohibited Substance, First or Second Offense Within 7 Years (Misdemeanor)","r":"NRS 484C.110(2)–(3); NRS 484C.400(1)(a)–(b)","c":"Misdemeanor","s":"YES","w":"7 years","y":7},{"n":"Open Container / Drinking While Driving","r":"NRS 484B.150","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Failure to Stop for Police (Eluding) — Misdemeanor","r":"NRS 484B.550(1)","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Eluding Police With a DUI Conviction From the Same Incident","r":"NRS 484B.550(5)","c":"Cat D Felony","s":"YES","w":"5 years","y":5},{"n":"Eluding Police — Property Damage or Endangering Others","r":"NRS 484B.550(3)","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Eluding Police — Causing Death or Bodily Harm","r":"NRS 484B.550(4)","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Driving on a Revoked or Suspended License","r":"NRS 483.560","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Operating Watercraft Under the Influence — Misdemeanor","r":"NRS 488.410(6)","c":"Misdemeanor","s":"YES","w":"7 years","y":7},{"n":"Domestic Battery — First Offense Within 7 Years (Misdemeanor)","r":"NRS 200.485(1)(a)","c":"Misdemeanor","s":"YES","w":"7 years","y":7},{"n":"Domestic Battery — Second Offense Within 7 Years (Misdemeanor)","r":"NRS 200.485(1)(b)","c":"Misdemeanor","s":"YES","w":"7 years","y":7},{"n":"Simple Assault","r":"NRS 200.471(2)(a)","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Petit Larceny — Under $1,200","r":"NRS 205.240","c":"Misdemeanor","s":"YES","w":"1 year","y":1,"xd":"2020-07-01"},{"n":"Shoplifting / Retail Theft — Under $1,200","r":"NRS 205.240","c":"Misdemeanor","s":"YES","w":"1 year","y":1,"xd":"2020-07-01"},{"n":"Trespassing","r":"NRS 207.200","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Peeping Into a Dwelling — With a Deadly Weapon (Felony)","r":"NRS 200.603(2)(a)","c":"Cat B Felony","s":"YES","w":"5 years","y":5},{"n":"Peeping Into a Dwelling — With a Camera or Recording Device (Gross Misdemeanor)","r":"NRS 200.603(2)(b)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Peeping Into a Dwelling — No Weapon or Recording Device (Misdemeanor)","r":"NRS 200.603(2)(c)","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Disorderly Conduct / Disturbing the Peace","r":"NRS 203.010","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Under the Influence of Controlled Substance","r":"NRS 453.411","c":"Misdemeanor","s":"YES","w":"1 year","y":1,"xd":"2020-07-01"},{"n":"Possession of Drug Paraphernalia","r":"NRS 453.566","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Loitering Near a School or Where Children Congregate","r":"NRS 207.270","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Bad Check — Under $1,200","r":"NRS 205.130(1)","c":"Misdemeanor","s":"YES","w":"1 year","y":1,"xd":"2020-07-01"},{"n":"Vandalism — $25 to $249","r":"NRS 206.310; NRS 193.155(3)","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Vandalism — Under $25","r":"NRS 206.310; NRS 193.155(4)","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Resisting a Public Officer — No Weapon (Misdemeanor)","r":"NRS 199.280(3)","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Hit and Run — Property Damage Only","r":"NRS 484E.020","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Failure to Give Information or Render Aid After a Crash","r":"NRS 484E.030","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Minor in Possession of Alcohol (MIP)","r":"NRS 202.020","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Contributing to the Delinquency or Neglect of a Minor","r":"NRS 201.110","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Animal Cruelty — First or Second Offense Within 7 Years (Misdemeanor)","r":"NRS 574.100(7)(a)–(b)","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Animal Cruelty — Felony (Third Offense Within 7 Years, or Willful and Malicious Torture or Killing of a Pet, Cat or Dog)","r":"NRS 574.100(6); NRS 574.100(7)(c)","c":"Cat B, C or D Felony","s":"YES","w":"5 years","y":5},{"n":"Reckless Driving — Misdemeanor","r":"NRS 484B.653(1)(a); NRS 484B.653(3)","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Speed Contest (Misdemeanor)","r":"NRS 484B.653(1)(b)–(c); NRS 484B.653(4)","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Driving in an Unauthorized Trick Driving Display (Gross Misdemeanor)","r":"NRS 484B.653(1)(d); NRS 484B.653(6)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"False Report of a Crime to Police","r":"NRS 207.280","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Possession of Marijuana — 1 Ounce or Less","r":"NRS 453.336(4)","c":"Misdemeanor","s":"YES","w":"No waiting period","y":0},{"n":"Prostitution — Engaging or Soliciting Outside a Licensed Brothel","r":"NRS 201.353","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Soliciting Prostitution as a Customer — First Offense (Misdemeanor)","r":"NRS 201.354(3)(a)","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Soliciting Prostitution as a Customer — Second or Subsequent Offense (Gross Misdemeanor)","r":"NRS 201.354(3)(b)–(c)","c":"Gross Misdemeanor","s":"YES","w":"2 years","y":2},{"n":"Living from the Earnings of a Prostitute (Adult)","r":"NRS 201.320","c":"Cat C or D Felony","s":"YES","w":"10 years","y":10},{"n":"Living from the Earnings of a Prostitute (Prostitute Under 18)","r":"NRS 201.320; NRS 179D.0357(4)","c":"Cat C or D Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Pandering (Adult, No Physical Force)","r":"NRS 201.300(1)","c":"Cat C Felony","s":"YES","w":"10 years","y":10},{"n":"Advancing Prostitution (Adult)","r":"NRS 201.395","c":"Cat C Felony","s":"YES","w":"10 years","y":10},{"n":"Advancing Prostitution (Victim Under 18)","r":"NRS 201.395; NRS 179D.0357(4)","c":"Cat C Felony","w":"CANNOT BE SEALED","s":"NO"},{"n":"Theft (Including Theft of Services) — Under $1,200","r":"NRS 205.0832; NRS 205.0835(2)(a)","c":"Misdemeanor","s":"YES","w":"1 year","y":1,"xd":"2020-07-01"},{"n":"Theft (Including Theft of Services) — $1,200 to $4,999","r":"NRS 205.0835(2)(b)","c":"Cat D Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Theft (Including Theft of Services) — $5,000 to $24,999","r":"NRS 205.0835(2)(c)","c":"Cat C Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Theft (Including Theft of Services) — $25,000 to $99,999","r":"NRS 205.0835(2)(d)","c":"Cat B Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Theft (Including Theft of Services) — $100,000 or More","r":"NRS 205.0835(2)(e)","c":"Cat B Felony","s":"YES","w":"5 years","y":5,"xd":"2020-07-01"},{"n":"Obtaining Money by False Pretenses — Under $1,200","r":"NRS 205.380(1)(a)","c":"Misdemeanor","s":"YES","w":"1 year","y":1,"xd":"2020-07-01"},{"n":"Contempt of Court","r":"NRS 199.340; NRS 22.010","c":"Misdemeanor","s":"YES","w":"1 year","y":1},{"n":"Embezzlement — Under $1,200","r":"NRS 205.300; NRS 205.240","c":"Misdemeanor","s":"YES","w":"1 year","y":1,"xd":"2020-07-01"},{"n":"Attempt to Commit a Category A Felony (Not a Sexual Offense or Crime Against a Child)","r":"NRS 193.153(1)(a)(1)","c":"Cat B Felony","s":"YES","w":"Special case","x":1},{"n":"Attempt to Commit a Category B Felony (Maximum Over 10 Years) (Not a Sexual Offense or Crime Against a Child)","r":"NRS 193.153(1)(a)(2)","c":"Cat B Felony","s":"YES","w":"Special case","x":1},{"n":"Attempt to Commit a Category B Felony (Maximum 10 Years or Less) (Not a Sexual Offense or Crime Against a Child)","r":"NRS 193.153(1)(a)(3)","c":"Cat C Felony","s":"YES","w":"Special case","x":1},{"n":"Attempt to Commit a Category C Felony — Convicted as a Felony (Not a Sexual Offense or Crime Against a Child)","r":"NRS 193.153(1)(a)(4)","c":"Cat D Felony","s":"YES","w":"Special case","x":1},{"n":"Attempt to Commit a Category C Felony — Convicted as a Gross Misdemeanor (Not a Sexual Offense or Crime Against a Child)","r":"NRS 193.153(1)(a)(4)","c":"Gross Misdemeanor","s":"YES","w":"Special case","x":1},{"n":"Attempt to Commit a Category D Felony (Not a Sexual Offense or Crime Against a Child)","r":"NRS 193.153(1)(a)(5)","c":"Cat E Felony or Gross Misdemeanor","s":"YES","w":"Special case","x":1},{"n":"Attempt to Commit a Category E Felony (Not a Sexual Offense or Crime Against a Child)","r":"NRS 193.153(1)(a)(6)","c":"Cat E Felony or Gross Misdemeanor","s":"YES","w":"Special case","x":1},{"n":"Attempt to Commit a Sexual Offense or a Crime Against a Child","r":"NRS 193.153; NRS 179.245(10)(b)(18); NRS 179D.0357(5)","c":"Varies","w":"CANNOT BE SEALED","s":"NO"},{"n":"Attempt to Commit a Misdemeanor or Gross Misdemeanor (Not a Sexual Offense or Crime Against a Child)","r":"NRS 193.153(1)(b)","c":"Misdemeanor","s":"YES","w":"Special case","x":1}];
+
+// ── LEAD SUBMISSION CONFIG ─────────────────────────────────────────────────
+// Leads go to the submit-lead Supabase Edge Function, which checks the
+// Cloudflare Turnstile result, every field and a per-visitor rate limit before
+// saving. No database key is needed in this page. NEVER paste the Turnstile
+// secret key or any Supabase secret / service_role key here.
+const SUPABASE_URL = 'https://ubtmdxknrhdeqtixhyri.supabase.co';
+// The function is named submit-lead in the dashboard; its web address is /super-task.
+const LEAD_ENDPOINT = SUPABASE_URL + '/functions/v1/super-task';
+// Turnstile site key (public): Cloudflare → Turnstile → this widget
+const TURNSTILE_SITE_KEY = '0x4AAAAAAFqpaMGpf8YwsPue';
+const LEAD_SITE = 'nevadasealingrecords';
+
+// ── STATE ──────────────────────────────────────────────────────────────────
+const S = {};           // answers
+let currentStep = 'stop';
+const navHistory = [];  // for Back button
+
+// Waiting periods by conviction type (years from sentence completion)
+const WAIT = {
+  catA:        { years: 10, label: 'Category A felony' },
+  catBCD:      { years: 5,  label: 'Category B, C, or D felony' },
+  catE:        { years: 2,  label: 'Category E felony' },
+  violence:    { years: 10, label: 'violent offense / burglary' },
+  standard:    { years: 1,  label: 'misdemeanor' },
+  gross:       { years: 2,  label: 'gross misdemeanor' },
+  battery_etc: { years: 2,  label: 'misdemeanor battery / harassment / stalking' },
+  dui:         { years: 7,  label: 'non-felony DUI' },
+  dom_battery: { years: 7,  label: 'non-felony domestic battery' },
+};
+
+// Step progress estimates (0–100)
+const PROGRESS = {
+  stop: 8, court_type: 18, arrest: 28, q2a: 38, q2b: 38, q2c: 38,
+  q3a: 50, q3b: 50, q4a: 62, q4b: 62, q5a: 62, q5b: 62,
+  q6a: 62, q6b: 62, cant_find: 72, sentence_date: 76, contact: 88, result: 100,
+};
+const STEP_NAMES = {
+  stop: 'Eligibility check', court_type: 'Court type', arrest: 'Arrest type',
+  q2a: 'Charges filed', q2b: 'Charges filed', q2c: 'Conviction check',
+  q3a: 'Conviction', q3b: 'Conviction', q4a: 'Felony charge', q4b: 'Charges dismissed',
+  q5a: 'Misdemeanor charge', q5b: 'Charges dismissed', q6a: 'Conviction date', q6b: 'Charges dismissed',
+  cant_find: 'Charge details', sentence_date: 'Sentence completed', contact: 'Your info', result: 'Your results',
+};
+
+// ── NAVIGATION ─────────────────────────────────────────────────────────────
+function go(toStep) {
+  clearErrors();
+  navHistory.push(currentStep);
+  currentStep = toStep;
+  render();
+}
+function goBack() {
+  clearErrors();
+  if (!navHistory.length) return;
+  const prev = navHistory.pop();
+  // Reset charge search state when returning to charge steps
+  if (prev === 'q4a' || prev === 'q5a') {
+    S.selectedCharge = null;
+    S.cantFind = false;
+    resetChargeUI(prev);
+  }
+  currentStep = prev;
+  render();
+}
+
+function render() {
+  document.querySelectorAll('.step').forEach(el =>
+    el.classList.toggle('active', el.dataset.step === currentStep)
+  );
+  const pct = PROGRESS[currentStep] || 10;
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('stepLabel').textContent =
+    currentStep === 'result' ? 'Done' : `Step ${navHistory.length + 1}`;
+  document.getElementById('stepName').textContent = STEP_NAMES[currentStep] || '';
+  document.getElementById('backBtn').disabled = navHistory.length === 0;
+  document.getElementById('backBtn').style.display =
+    (currentStep === 'result' || currentStep === 'stop') ? 'none' : 'inline-block';
+  const nextBtn = document.getElementById('nextBtn');
+  nextBtn.style.display = currentStep === 'result' ? 'none' : 'inline-block';
+  nextBtn.textContent = currentStep === 'contact' ? 'See My Results' : 'Continue';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (currentStep === 'contact') ensureTurnstile();
+}
+
+// ── STEP ADVANCE LOGIC ─────────────────────────────────────────────────────
+let formStarted = false;
+function advance() {
+  if (!validateCurrent()) return;
+  capture();
+
+  // Tell Google Tag Manager the eligibility check was started (the first time
+  // someone answers a question and continues). Like lead_submitted, it carries
+  // NO details: not which answer they picked, nothing about them.
+  if (!formStarted) {
+    formStarted = true;
+    (window.dataLayer = window.dataLayer || []).push({ event: 'form_started' });
+  }
+
+  switch (currentStep) {
+
+    // Stop page
+    case 'stop':
+      if (S.stop === 'yes') { renderResult('disqualified'); go('result'); }
+      else go('court_type');
+      break;
+
+    // Court type — Nevada state court?
+    case 'court_type':
+      if (S.court_type === 'yes') go('arrest');
+      else { renderResult('not_nevada'); go('result'); }
+      break;
+
+    // Q1 — arrest type
+    case 'arrest':
+      if (S.arrest === 'felony')      go('q2a');
+      else if (S.arrest === 'misdemeanor') go('q2b');
+      else                             go('q2c');
+      break;
+
+    // Q2a — felony charges filed?
+    case 'q2a':
+      if (S.q2a === 'yes_felony')  go('q3a');
+      else if (S.q2a === 'yes_misd')   go('q3b');
+      else { S.pendingOutcome = 'packet'; S.outcomeReason = 'no_charges'; go('contact'); }
+      break;
+
+    // Q2b — misdemeanor charges filed?
+    case 'q2b':
+      if (S.q2b === 'yes_misd')    go('q3b');
+      else if (S.q2b === 'yes_felony') go('q3a');
+      else { S.pendingOutcome = 'packet'; S.outcomeReason = 'no_charges'; go('contact'); }
+      break;
+
+    // Q2c — were you convicted? (unknown arrest type)
+    case 'q2c':
+      if (S.q2c === 'yes')     go('q6a');
+      else if (S.q2c === 'no') go('q6b');
+      else                     { S.pendingOutcome = 'contact'; S.outcomeReason = 'unknown_conviction'; go('contact'); }
+      break;
+
+    // Q3a — convicted of felony?
+    case 'q3a':
+      if (S.q3a === 'yes') go('q4a');
+      else                 go('q4b');
+      break;
+
+    // Q3b — convicted of misdemeanor?
+    case 'q3b':
+      if (S.q3b === 'yes') go('q5a');
+      else                 go('q5b');
+      break;
+
+    // Q4a — felony charge search
+    case 'q4a':
+      if (S.cantFind) { go('cant_find'); }
+      else if (S.selectedCharge) routeSelectedCharge();
+      break;
+
+    // Q4b — felony dismissed?
+    case 'q4b':
+      if (S.q4b === 'yes') { S.pendingOutcome = 'packet'; S.outcomeReason = 'dismissed'; go('contact'); }
+      else                 { S.pendingOutcome = 'contact'; S.outcomeReason = 'not_dismissed'; go('contact'); }
+      break;
+
+    // Q5a — misdemeanor charge search
+    case 'q5a':
+      if (S.cantFind) { go('cant_find'); }
+      else if (S.selectedCharge) routeSelectedCharge();
+      break;
+
+    // Q5b — misdemeanor dismissed?
+    case 'q5b':
+      if (S.q5b === 'yes') { S.pendingOutcome = 'packet'; S.outcomeReason = 'dismissed'; go('contact'); }
+      else                 { S.pendingOutcome = 'contact'; S.outcomeReason = 'not_dismissed'; go('contact'); }
+      break;
+
+    // Q6a — when were you convicted? (convicted but unknown charge path)
+    case 'q6a':
+      S.pendingOutcome = 'contact';
+      S.outcomeReason = 'complex';
+      go('contact');
+      break;
+
+    // Q6b — dismissed? (don't-know-conviction path)
+    case 'q6b':
+      if (S.q6b === 'yes') { S.pendingOutcome = 'packet'; S.outcomeReason = 'dismissed'; go('contact'); }
+      else                 { S.pendingOutcome = 'contact'; S.outcomeReason = 'not_dismissed'; go('contact'); }
+      break;
+
+    // Can't find charge — description step
+    case 'cant_find':
+      S.chargeDescription = (document.getElementById('chargeDescription').value || '').trim();
+      go('contact');
+      break;
+
+    // Sentence date
+    case 'sentence_date':
+      calcWaitPeriod();
+      go('contact');
+      break;
+
+    // Contact → save lead → result
+    case 'contact':
+      submitLead().then(ok => {
+        if (ok) { renderResult(S.pendingOutcome); go('result'); }
+      });
+      break;
+  }
+}
+
+// ── CHARGE ROUTING ──────────────────────────────────────────────────────────
+// After a charge is picked: cannot be sealed → result; special case → staff
+// confirm; otherwise use the charge's waiting period.
+function routeSelectedCharge() {
+  const c = S.selectedCharge;
+  if (c.s === 'NO') { renderResult('disqualified_charge'); go('result'); return; }
+  if (c.x) { S.convictionType = 'special'; go('sentence_date'); return; }
+  chargeWait(c);
+}
+function chargeWait(c) {
+  const yrs = Number.isInteger(c.y) ? c.y : parseWaitYears(c.w);
+  if (yrs !== null) { WAIT['custom'] = { years: yrs, label: c.n }; S.convictionType = 'custom'; go('sentence_date'); }
+  else { S.pendingOutcome = 'contact'; S.outcomeReason = 'unknown_category'; go('contact'); }
+}
+
+// ── WAIT PERIOD CALCULATION ─────────────────────────────────────────────────
+function calcWaitPeriod() {
+  // Special-case charges: wait depends on facts the form doesn't ask — staff confirm
+  if (S.convictionType === 'special') {
+    S.pendingOutcome = 'contact'; S.outcomeReason = 'special_case';
+    S.waitYears = null; S.eligibleDate = null; return;
+  }
+  const w = WAIT[S.convictionType];
+  if (!w) { S.pendingOutcome = 'contact'; S.outcomeReason = 'unknown_category'; return; }
+  S.waitYears = w.years;
+  S.waitLabel = w.label;
+
+  if (S.completionUnsure || !S.completionDate) {
+    S.pendingOutcome = 'contact'; S.outcomeReason = 'unknown_date'; return;
+  }
+  const completed = new Date(S.completionDate);
+  const eligible = new Date(completed);
+  eligible.setFullYear(eligible.getFullYear() + w.years);
+  const now = new Date();
+  if (now >= eligible) {
+    S.pendingOutcome = 'packet'; S.outcomeReason = 'wait_elapsed';
+  } else {
+    S.pendingOutcome = 'waiting';
+    S.eligibleDate = eligible;
+  }
+}
+
+// ── VALIDATION ──────────────────────────────────────────────────────────────
+// Inline error messages (instead of pop-ups): shown under the field that needs fixing
+function clearErrors() {
+  document.querySelectorAll('.field-error').forEach(e => e.remove());
+  document.querySelectorAll('[aria-invalid="true"]').forEach(el => {
+    el.removeAttribute('aria-invalid');
+    const prev = el.dataset.prevDescribedby;
+    if (prev) el.setAttribute('aria-describedby', prev); else el.removeAttribute('aria-describedby');
+    delete el.dataset.prevDescribedby;
+  });
+  document.querySelectorAll('[data-invalid]').forEach(el => el.removeAttribute('data-invalid'));
+}
+function showError(field, after, msg) {
+  clearErrors();
+  const p = document.createElement('p');
+  p.className = 'field-error';
+  p.id = 'fieldError';
+  p.setAttribute('role', 'alert');
+  p.textContent = msg;
+  after.insertAdjacentElement('afterend', p);
+  if (field) {
+    field.dataset.prevDescribedby = field.getAttribute('aria-describedby') || '';
+    field.setAttribute('aria-describedby', (field.dataset.prevDescribedby + ' fieldError').trim());
+    field.setAttribute('aria-invalid', 'true');
+    try { field.focus({ preventScroll: true }); } catch (e) {}
+  }
+  p.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  return false;
+}
+// Remove the message as soon as the person starts fixing it
+['input', 'change'].forEach(ev => document.addEventListener(ev, e => {
+  if (e.target.closest && e.target.closest('.step') && document.querySelector('.field-error')) clearErrors();
+}));
+
+// Conviction date: month + year dropdowns (works in every browser, unlike type="month").
+// Saved as "YYYY-MM", or "YYYY" if they only know the year.
+function convictionDateValue() {
+  const y = document.getElementById('convictionYear').value;
+  const m = document.getElementById('convictionMonth').value;
+  return y ? (m ? `${y}-${m}` : y) : '';
+}
+(function fillYears() {
+  ['convictionYear', 'completionYear'].forEach(id => {
+    const sel = document.getElementById(id);
+    for (let y = new Date().getFullYear(); y >= 1960; y--) sel.add(new Option(y, y));
+  });
+})();
+
+// Sentence completion: month + year dropdowns. Counted from the LAST day of that
+// month, so the form never says someone is eligible earlier than they are.
+// Returns "YYYY-MM-DD", or '' if either dropdown is empty.
+function completionISO() {
+  const y = +document.getElementById('completionYear').value;
+  const m = +document.getElementById('completionMonth').value;
+  if (!y || !m) return '';
+  const last = new Date(y, m, 0).getDate();
+  return `${y}-${String(m).padStart(2, '0')}-${String(last).padStart(2, '0')}`;
+}
+
+function validateCurrent() {
+  const radio = (name) => document.querySelector(`input[name="${name}"]:checked`);
+  const $ = (id) => document.getElementById(id);
+  const err = (id, msg, afterEl) => showError($(id), afterEl || $(id), msg);
+
+  if (['stop','court_type','arrest','q2a','q2b','q2c','q3a','q3b','q4b','q5b','q6b'].includes(currentStep)) {
+    if (!radio(currentStep)) {
+      const first = document.querySelector(`input[name="${currentStep}"]`);
+      const group = first.closest('.options') || first.closest('label').parentElement;
+      group.setAttribute('data-invalid', '');
+      return showError(first, group, 'Please choose an option to continue.');
+    }
+  }
+  if (currentStep === 'q4a' || currentStep === 'q5a') {
+    if (!S.selectedCharge && !S.cantFind) {
+      const input = document.querySelector(`[data-step="${currentStep}"] .charge-search-input`);
+      return showError(input, input.closest('.charge-search-wrap'), 'Please search for your charge and select it from the list, or click "I can\'t find my charge."');
+    }
+  }
+  if (currentStep === 'q6a') {
+    const unsure = document.getElementById('convictionUnsure').checked;
+    if (!unsure && !$('convictionYear').value)
+      return err('convictionYear', 'Please choose the year you were convicted (the month is optional), or check "I\'m not sure."', $('convictionUnsure').closest('label'));
+  }
+  if (currentStep === 'sentence_date') {
+    const unsure = document.getElementById('completionUnsure').checked;
+    if (!unsure && !$('completionMonth').value && !$('completionYear').value)
+      return err('completionMonth', 'Please choose the month and year you completed your sentence, or check "I\'m not sure."', $('completionUnsure').closest('label'));
+    if (!unsure && !$('completionMonth').value)
+      return err('completionMonth', 'Please choose the month too. Your best guess is fine.', $('completionUnsure').closest('label'));
+    if (!unsure && !$('completionYear').value)
+      return err('completionYear', 'Please choose the year too.', $('completionUnsure').closest('label'));
+  }
+  if (currentStep === 'contact') {
+    if (!document.getElementById('county').value) return err('county', 'Please select the county your case was in.');
+    const abroad = document.getElementById('currentState').value === 'Outside the U.S.';
+    if (!document.getElementById('fullName').value.trim()) return err('fullName', 'Please enter your full name.');
+    if (!document.getElementById('phone').value.trim()) return err('phone', 'Please enter your phone number.', $('phoneHelp'));
+    const phoneDigits = document.getElementById('phone').value.replace(/\D/g, '');
+    if (!abroad && !/^1?\d{10}$/.test(phoneDigits))
+      return err('phone', 'Please enter a 10-digit phone number, e.g. (775) 555-1234. If you live outside the U.S., choose that under "Where do you live now?" below.', $('phoneHelp'));
+    if (abroad && (phoneDigits.length < 7 || phoneDigits.length > 15))
+      return err('phone', 'Please enter your phone number including the country code, e.g. +44 20 7946 0958.', $('phoneHelp'));
+    if (!document.getElementById('email').value.trim()) return err('email', 'Please enter your email address.', $('emailHelp'));
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(document.getElementById('email').value.trim()))
+      return err('email', 'Please enter a complete email address, e.g. name@example.com.', $('emailHelp'));
+    if (!document.querySelector('input[name="preferredContact"]:checked')) {
+      const first = document.querySelector('input[name="preferredContact"]');
+      return showError(first, first.closest('label').parentElement, 'Please choose how you\'d like us to contact you.');
+    }
+    if (!document.getElementById('currentCity').value.trim()) return err('currentCity', 'Please enter the city where you live now.');
+    if (abroad && !document.getElementById('currentCountry').value) return err('currentCountry', 'Please select the country where you live now.');
+    if (!document.getElementById('consent').checked) return err('consent', 'Please check the box to agree to be contacted.', $('consent').closest('label'));
+  }
+  return true;
+}
+
+// ── CAPTURE ─────────────────────────────────────────────────────────────────
+function capture() {
+  const radio = (name) => { const el = document.querySelector(`input[name="${name}"]:checked`); return el ? el.value : null; };
+  const steps = ['stop','court_type','arrest','q2a','q2b','q2c','q3a','q3b','q4b','q5b','q6b'];
+  steps.forEach(name => { if (currentStep === name) S[name] = radio(name); });
+  // q4a/q5a capture is handled by selectCharge() and setCantFind()
+
+  if (currentStep === 'q6a') {
+    S.convictionUnsure = document.getElementById('convictionUnsure').checked;
+    S.convictionDate = S.convictionUnsure ? '' : convictionDateValue();
+  }
+  if (currentStep === 'sentence_date') {
+    S.completionUnsure = document.getElementById('completionUnsure').checked;
+    S.completionDate = S.completionUnsure ? '' : completionISO();
+    S.completionMonth = S.completionUnsure ? '' : `${document.getElementById('completionYear').value}-${document.getElementById('completionMonth').value}`;
+  }
+  if (currentStep === 'contact') {
+    S.county = document.getElementById('county').value;
+    S.currentCity = document.getElementById('currentCity').value.trim();
+    S.currentState = document.getElementById('currentState').value;
+    S.currentCountry = S.currentState === 'Outside the U.S.' ? document.getElementById('currentCountry').value : 'United States';
+    S.fullName = document.getElementById('fullName').value.trim();
+    S.phone = document.getElementById('phone').value.trim();
+    S.email = document.getElementById('email').value.trim();
+    const prefContact = document.querySelector('input[name="preferredContact"]:checked');
+    S.preferredContact = prefContact ? prefContact.value : '';
+    S.notes = document.getElementById('notes').value.trim();
+    // Merge cant_find description into notes if present
+    if (S.chargeDescription) {
+      S.notes = S.chargeDescription + (S.notes ? '\n\n' + S.notes : '');
+    }
+  }
+}
+
+// ── SAVE LEAD TO SUPABASE ───────────────────────────────────────────────────
+let leadSubmitted = false;
+
+async function submitLead() {
+  if (leadSubmitted) return true;              // don't double-insert on Back → Continue
+
+  // Spam trap filled in → act normally but save nothing
+  if (document.getElementById('website').value) { leadSubmitted = true; return true; }
+
+  const btn = document.getElementById('nextBtn');
+  const label = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = 'Submitting…';
+
+  const ch = S.selectedCharge || {};
+  const isoDay = (d) => (d instanceof Date && !isNaN(d)) ? d.toISOString().slice(0, 10) : null;
+
+  // Raw answers, minus contact fields (those get their own columns)
+  const answers = {};
+  Object.keys(S).forEach(k => {
+    if (['fullName','phone','email','notes','preferredContact','county','currentCity','currentState','currentCountry'].includes(k)) return;
+    const v = S[k];
+    answers[k] = v instanceof Date ? isoDay(v) : v;
+  });
+
+  const lead = {
+    site: LEAD_SITE,
+    full_name: S.fullName,
+    phone: S.phone,
+    email: S.email,
+    preferred_contact: S.preferredContact,
+    county: S.county || null,
+    current_city: S.currentCity || null,
+    current_state: S.currentState || null,
+    current_country: S.currentCountry || null,
+    notes: S.notes || null,
+    consent: true,
+    consent_text: document.querySelector('label.consent span').textContent.trim(),
+    outcome: S.pendingOutcome || null,
+    outcome_reason: S.outcomeReason || null,
+    charge_name: ch.n || null,
+    charge_nrs: ch.r || null,
+    charge_category: ch.c || null,
+    conviction_date: S.convictionDate || null,
+    completion_date: S.completionDate || null,
+    eligible_date: isoDay(S.eligibleDate),
+    wait_years: Number.isInteger(S.waitYears) ? S.waitYears : null,
+    answers,
+    page_url: location.href.slice(0, 500),
+    user_agent: navigator.userAgent.slice(0, 500),
+    // Where they came from (ad campaign, search, social, direct). Saved only in our database.
+    ...(typeof window.lvrsLeadSource === 'function' ? window.lvrsLeadSource() : {}),
+  };
+
+  const token = turnstileToken();
+  if (!token) {
+    btn.disabled = false; btn.textContent = label;
+    const box = document.getElementById('turnstileBox');
+    showError(null, box, window.turnstile
+      ? 'One moment: we\'re running a quick spam check. Please wait a few seconds, complete the check above if one appears, then click See My Results again.'
+      : 'Our spam check didn\'t load. Please turn off any ad or script blocker and reload the page, or email us at clarissa@kenstoverlaw.com.');
+    return false;
+  }
+
+  try {
+    const res = await fetch(LEAD_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ lead, turnstileToken: token }),
+    });
+    if (!res.ok) {
+      let code = '';
+      try { code = (await res.json()).error || ''; } catch (e) {}
+      const err = new Error(res.status + ' ' + code); err.status = res.status; err.code = code;
+      throw err;
+    }
+    leadSubmitted = true;
+    // Tell Google Tag Manager a lead came in. The event carries NO details (no name,
+    // contact info, charge, county or result) and is identical for every lead.
+    (window.dataLayer = window.dataLayer || []).push({ event: 'lead_submitted' });
+    return true;
+  } catch (err) {
+    console.error('Lead submission failed:', err.message || err);
+    resetTurnstile();   // each check can only be used once
+    let msg = 'Sorry — we couldn\'t send your information just now. Please check your connection and try again, or email us at clarissa@kenstoverlaw.com.';
+    if (err.status === 429) msg = 'We\'ve received several submissions from your connection. Please try again later, or email us at clarissa@kenstoverlaw.com.';
+    else if (err.status === 403) msg = 'We couldn\'t complete the spam check. Please wait a few seconds and click See My Results again.';
+    else if (err.status === 400) msg = 'Something in the form didn\'t look right. Please check your answers and try again, or email us at clarissa@kenstoverlaw.com.';
+    showError(null, document.getElementById('consent').closest('label'), msg);
+    return false;
+  } finally {
+    if (btn.textContent === 'Submitting…') { btn.disabled = false; btn.textContent = label; }
+  }
+}
+
+// ── SPAM CHECK (Cloudflare Turnstile) ───────────────────────────────────────
+// Rendered when the contact step opens. "interaction-only" keeps it invisible
+// unless Cloudflare needs the visitor to tick a box.
+let tsWidget = null;
+let tsTries = 0;
+function ensureTurnstile() {
+  if (tsWidget !== null) return;
+  if (!window.turnstile) { if (tsTries++ < 40) setTimeout(ensureTurnstile, 250); return; }
+  tsWidget = window.turnstile.render('#turnstileBox', {
+    sitekey: TURNSTILE_SITE_KEY,
+    action: 'submit_lead',
+    appearance: 'interaction-only',
+    'error-callback': function () { /* handled when the visitor submits */ },
+  });
+}
+function turnstileToken() {
+  if (tsWidget === null || !window.turnstile) return '';
+  return window.turnstile.getResponse(tsWidget) || '';
+}
+function resetTurnstile() {
+  if (tsWidget !== null && window.turnstile) window.turnstile.reset(tsWidget);
+}
+
+// ── RESULTS ─────────────────────────────────────────────────────────────────
+function fmtDate(d) {
+  return d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+}
+
+// How the office will follow up, based on the visitor's preferred contact method (no personal details shown)
+// Good News page, step 1: how the office will reach out
+function firstContact() {
+  const m = S.preferredContact;
+  if (m === 'text')  return "Our office will text you to schedule a call";
+  if (m === 'email') return "Our office will email you to schedule a call";
+  return "Our office will call you";
+}
+
+function contactLine(intro) {
+  const m = S.preferredContact;
+  if (m === 'text')  return `${intro} will text you to schedule a time to talk.`;
+  if (m === 'email') return `${intro} will email you to schedule a time to talk.`;
+  return `${intro} will call you to discuss your case.`;
+}
+
+// Waiting page: how the office will reach out near the eligibility date
+function waitReach() {
+  const m = S.preferredContact;
+  if (m === 'text')  return "we'll text you to schedule a call";
+  if (m === 'email') return "we'll email you to schedule a call";
+  return "we'll call you";
+}
+
+function renderResult(outcome) {
+  const el = document.getElementById('resultOutput');
+  const name = S.fullName ? `, ${S.fullName.split(' ')[0]}` : '';
+
+  if (outcome === 'not_nevada') {
+    el.innerHTML = `
+      <div class="result-card result-disqualified">
+        <h2>This service is for Nevada state court cases only.</h2>
+        <p style="margin-top:10px;">It sounds like your case was handled in federal court or in another state. Our practice covers Nevada state court record sealing — we aren't able to assist with federal or out-of-state cases.</p>
+      </div>
+      <p style="margin-top:14px; font-size:14px;">Questions? Email us at <a href="mailto:clarissa@kenstoverlaw.com" style="color:var(--navy); font-weight:bold;">clarissa@kenstoverlaw.com</a>.</p>
+      <p style="font-size:13.5px; color:var(--muted); margin-top:12px;">If you answered incorrectly, you can <a href="eligibility" style="color:var(--navy);">start over</a>.</p>
+    `;
+    return;
+  }
+
+  if (outcome === 'disqualified') {
+    el.innerHTML = `
+      <div class="result-card result-disqualified">
+        <h2>A Petition to Seal Records cannot be granted in your case.</h2>
+        <p style="margin-top:10px;">Based on your answers, your conviction is among those that cannot be sealed under Nevada law.</p>
+      </div>
+      <p style="margin-top:14px; font-size:14px;">Questions? Email us at <a href="mailto:clarissa@kenstoverlaw.com" style="color:var(--navy); font-weight:bold;">clarissa@kenstoverlaw.com</a>.</p>
+      <p style="font-size:13.5px; color:var(--muted); margin-top:12px;">If you believe you answered a question incorrectly, you can <a href="eligibility" style="color:var(--navy);">start over</a>.</p>
+    `;
+    return;
+  }
+
+  if (outcome === 'disqualified_charge') {
+    const ch = S.selectedCharge;
+    el.innerHTML = `
+      <div class="result-card result-disqualified">
+        <h2>This conviction cannot be sealed under Nevada law.</h2>
+        <p style="margin-top:10px;">The charge you selected — <strong>${ch ? ch.n : 'your charge'}</strong>${ch ? ` (${ch.r})` : ''} — is explicitly barred from sealing under Nevada Revised Statutes.</p>
+      </div>
+      <p style="font-size:14px; margin-top:14px;">If you believe this was an error or if you have additional charges you'd like to discuss, please email us at <a href="mailto:clarissa@kenstoverlaw.com" style="color:var(--navy); font-weight:bold;">clarissa@kenstoverlaw.com</a>. Our office can review your full record and advise you on your specific situation.</p>
+      <p style="font-size:13.5px; color:var(--muted); margin-top:12px;">Selected the wrong charge? <a href="eligibility" style="color:var(--navy);">Start over</a>.</p>
+    `;
+    return;
+  }
+
+  if (outcome === 'packet') {
+    const reason = S.outcomeReason;
+    let why = '';
+    if (reason === 'no_charges') why = 'Because no formal charges were filed against you, there is no waiting period — you may be eligible to file a Petition immediately.';
+    else if (reason === 'dismissed') why = 'Because your charges were dismissed, there is no waiting period — you may be eligible to file a Petition immediately.';
+    else if (reason === 'wait_elapsed') why = S.waitYears === 0
+      ? `There is no waiting period for a ${S.waitLabel} conviction once your sentence is complete.`
+      : `Your ${S.waitYears}-year waiting period for a ${S.waitLabel} conviction has passed based on your sentence completion date.`;
+
+    el.innerHTML = `
+      <div class="result-card result-eligible">
+        <h2>Good news${name} — you may be eligible to seal your record.</h2>
+        <p style="margin-top:10px;">${why}</p>
+      </div>
+      <div class="next-steps">
+        <h3>Here's how it works from here:</h3>
+        <div class="next-step-item"><div class="step-num">1</div><div><strong>We'll contact you first.</strong> ${firstContact()} to go over your case and ask a few questions, so we can confirm your situation before anything else.</div></div>
+        <div class="next-step-item"><div class="step-num">2</div><div><strong>Then we'll send your Sealing Record Packet.</strong> If your case looks like a fit, we'll email you a packet explaining how to order your official State and Federal criminal history records. This is the one step you handle directly, since Nevada law requires you to request your own records.</div></div>
+        <div class="next-step-item"><div class="step-num">3</div><div><strong>Our office takes it from there.</strong> Once your records arrive, our attorneys prepare your Petition to Seal Records, handle the court filings, and represent you at any hearings. In most cases you won't need to appear in court — if your court requires you to attend, we'll let you know in advance.</div></div>
+        <p style="margin-top:14px; font-size:14px;"><strong class="deadline-red">One deadline to keep in mind:</strong> Once you receive your State criminal history record, you have <strong class="deadline-red">30 days</strong> to file your Petition. Contact our office as soon as it arrives.</p>
+      </div>
+      <p style="margin-top:18px; font-size:14px;">Questions in the meantime? Email us at <a href="mailto:clarissa@kenstoverlaw.com" style="color:var(--navy); font-weight:bold;">clarissa@kenstoverlaw.com</a>.</p>
+      <p class="disclaimer">This is an informational estimate based on the answers you provided. Eligibility is determined by an attorney after reviewing your verified State criminal record. Results do not constitute legal advice.</p>
+    `;
+    return;
+  }
+
+  if (outcome === 'waiting') {
+    const eligible = S.eligibleDate;
+    el.innerHTML = `
+      <div class="result-card result-waiting">
+        <h2>You may be eligible — but your waiting period isn't up yet.</h2>
+        <p style="margin-top:10px;">Based on a <strong>${S.waitYears}-year waiting period</strong> for a ${S.waitLabel} conviction, you appear to become eligible around <strong>${fmtDate(eligible)}</strong>.</p>
+      </div>
+      <div class="next-steps">
+        <h3>Here's what happens next:</h3>
+        <div class="next-step-item"><div class="step-num">1</div><div><strong>Your eligibility date is saved.</strong> We've noted that you appear to become eligible around <strong>${fmtDate(eligible)}</strong>.</div></div>
+        <div class="next-step-item"><div class="step-num">2</div><div><strong>As your eligibility date gets close,</strong> ${waitReach()} to go over your case and confirm that you're eligible. Once we've confirmed it, we'll send your Sealing Record Packet, which explains how and when to order the records needed for your petition.</div></div>
+        <div class="next-step-item"><div class="step-num">3</div><div><strong>Our office takes it from there.</strong> Once you're eligible and your records are in hand, our attorneys prepare and file your petition and handle the court process. In most cases, you won't need to appear in court.</div></div>
+      </div>
+      <p style="margin-top:18px; font-size:14px;">Questions in the meantime? Email us at <a href="mailto:clarissa@kenstoverlaw.com" style="color:var(--navy); font-weight:bold;">clarissa@kenstoverlaw.com</a>.</p>
+      <p class="disclaimer">This is an estimate based on the answers you provided. Your actual eligibility date may differ depending on your specific sentence terms. This does not constitute legal advice.</p>
+    `;
+    return;
+  }
+
+  // Contact / complex case
+  let msg = 'Your situation needs a closer look from our office.';
+  if (S.outcomeReason === 'complex') msg = 'Because you were convicted and we need more information about the specific charges and timing, your situation needs to be reviewed by our office.';
+  else if (S.outcomeReason === 'unknown_conviction') msg = 'Because your conviction status is unclear, we want to make sure we have the full picture before advising you.';
+  else if (S.outcomeReason === 'unknown_category') msg = 'To determine your exact waiting period, we need to review your official State criminal history with you.';
+  else if (S.outcomeReason === 'not_dismissed') msg = 'Based on your answers, your situation may still have options — we want to review your case with you directly.';
+  // AI-drafted copy (option A) — pending Attorney Stover's approval
+  else if (S.outcomeReason === 'special_case') msg = 'Your charge has a few factors that affect when it can be sealed, so we can\'t confirm your waiting period online. Our team will review your answers and contact you shortly.';
+  else if (S.outcomeReason === 'unknown_date') msg = 'Without your sentence completion date, we can\'t calculate your waiting period precisely — but we can work through it with you.';
+
+  el.innerHTML = `
+    <div class="result-card result-contact">
+      <h2>Your case needs a personal review from our office.</h2>
+      <p style="margin-top:10px;">${msg}</p>
+    </div>
+    <p style="font-size:14px; margin-top:12px;">${contactLine("Someone from our office")}</p>
+    <p style="margin-top:18px; font-size:14px;">Questions in the meantime? Email us at <a href="mailto:clarissa@kenstoverlaw.com" style="color:var(--navy); font-weight:bold;">clarissa@kenstoverlaw.com</a>.</p>
+    <p class="disclaimer">Submitting this form does not create an attorney-client relationship. Information on this site does not constitute legal advice.</p>
+  `;
+}
+
+// ── CHARGE SEARCH ─────────────────────────────────────────────────────────────
+function parseWaitYears(waitStr) {
+  if (!waitStr || waitStr === '—' || waitStr.includes('CANNOT')) return null;
+  const m = waitStr.match(/(\d+)/);
+  return m ? parseInt(m[1]) : null;
+}
+
+// Each charge step only lists charges of its own level: the felony step shows
+// felonies, the misdemeanor step shows misdemeanors and gross misdemeanors.
+// Charges that can be either (e.g. "Cat E Felony or Gross Misdemeanor") show on both.
+const CHARGE_UI = {
+  q4a: { level: 'felony', input: 'chargeSearchFelony', results: 'chargeResultsFelony', box: 'selectedChargeBoxFelony', name: 'selectedChargeNameFelony', meta: 'selectedChargeMetaFelony' },
+  q5a: { level: 'misd',   input: 'chargeSearchMisd',   results: 'chargeResultsMisd',   box: 'selectedChargeBoxMisd',   name: 'selectedChargeNameMisd',   meta: 'selectedChargeMetaMisd' },
+};
+const RESULTS_SHOWN = 6;   // shown before "Show all"
+const RESULTS_MAX = 30;    // most shown after "Show all"
+
+function fitsLevel(c, level) {
+  if (/Varies|Same as/i.test(c.c)) return true;
+  return level === 'felony' ? /Felony/i.test(c.c) : /Misdemeanor/i.test(c.c);
+}
+const escRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const wordStart = (w) => new RegExp('(^|[^a-z0-9])' + escRe(w), 'i');
+
+// Every typed word must match the start of a word in the charge name or NRS
+// citation. Best matches first: name starts with the search, then the search as
+// a phrase in the name, then all words in the name, then citation matches.
+function filterCharges(query, level) {
+  const q = (query || '').trim().toLowerCase();
+  if (q.length < 3) return [];
+  const words = q.split(/\s+/).map(wordStart);
+  const phrase = wordStart(q);
+  const scored = [];
+  CHARGES.forEach((c, i) => {
+    if (level && !fitsLevel(c, level)) return;
+    const name = c.n.toLowerCase();
+    if (!words.every(r => r.test(name + ' ' + c.r.toLowerCase()))) return;
+    const score = name.startsWith(q) ? 0 : phrase.test(name) ? 1 : words.every(r => r.test(name)) ? 2 : 3;
+    scored.push({ c, score, i });
+  });
+  scored.sort((a, b) => a.score - b.score || a.c.n.length - b.c.n.length || a.i - b.i);
+  return scored.map(s => s.c);
+}
+
+function renderSearchResults(step, showAll) {
+  const ui = CHARGE_UI[step];
+  const input = document.getElementById(ui.input);
+  const container = document.getElementById(ui.results);
+  if (!input || !container) return;
+
+  const query = input.value.trim();
+  if (query.length < 3) { container.style.display = 'none'; container.innerHTML = ''; return; }
+  const matches = filterCharges(query, ui.level);
+
+  if (!matches.length) {
+    container.classList.remove('expanded');
+    container.innerHTML = '<div class="search-no-results">No charges found — try different words, or use the "I can\'t find my charge" link below.</div>';
+    container.style.display = 'block';
+    return;
+  }
+
+  const shown = matches.slice(0, showAll ? RESULTS_MAX : RESULTS_SHOWN);
+  let html = shown.map(c => {
+    const isSelected = S.selectedCharge && S.selectedCharge.n === c.n;
+    const badge = c.s === 'NO'
+      ? '<span class="sr-badge sr-badge-no">Cannot be sealed</span>'
+      : `<span class="sr-badge sr-badge-yes">Wait: ${c.w}</span>`;
+    return `<button type="button" class="search-result${isSelected ? ' sr-selected' : ''}" data-charge-step="${step}" data-charge="${encodeURIComponent(c.n)}">
+      <span class="sr-name">${c.n}</span>
+      <span class="sr-detail"><span class="sr-nrs">${c.r}</span> ${badge}</span>
+    </button>`;
+  }).join('');
+  if (!showAll && matches.length > RESULTS_SHOWN) {
+    html += `<button type="button" class="show-more" data-charge-step="${step}">Show all ${matches.length} matches</button>`;
+  } else if (matches.length > RESULTS_MAX) {
+    html += `<div class="search-more-note">Showing ${RESULTS_MAX} of ${matches.length}. Add another word to narrow it down.</div>`;
+  }
+  container.innerHTML = html;
+  container.classList.toggle('expanded', !!showAll && matches.length > RESULTS_SHOWN);
+  container.style.display = 'block';
+}
+
+function selectCharge(step, chargeName) {
+  const ui = CHARGE_UI[step];
+  const charge = CHARGES.find(c => c.n === chargeName);
+  if (!ui || !charge) return;
+  S.selectedCharge = charge;
+  S.cantFind = false;
+  clearErrors();
+
+  const nameEl = document.getElementById(ui.name);
+  const metaEl = document.getElementById(ui.meta);
+  if (nameEl) nameEl.textContent = charge.n;
+  if (metaEl) {
+    const waitText = charge.s === 'NO' ? '⛔ Cannot be sealed under Nevada law' : `✓ Sealable — ${charge.w}${/\d/.test(charge.w) ? ' waiting period' : ''} | ${charge.c}`;
+    metaEl.textContent = `${charge.r}  ·  ${waitText}`;
+    metaEl.style.color = charge.s === 'NO' ? 'var(--red-text)' : 'var(--green-text)';
+  }
+
+  // Close the list and bring the selected charge and Continue button into view
+  // (blurring the search box also closes the phone keyboard).
+  document.getElementById(ui.results).style.display = 'none';
+  document.getElementById(ui.box).style.display = 'block';
+  document.getElementById(ui.input).blur();
+  requestAnimationFrame(() => {
+    const nav = document.querySelector('.nav-row');
+    if (nav) nav.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  });
+}
+
+// "Change" on the selected charge: reopen the list for the current search
+function changeCharge(step) {
+  const ui = CHARGE_UI[step];
+  S.selectedCharge = null;
+  S.cantFind = false;
+  document.getElementById(ui.box).style.display = 'none';
+  renderSearchResults(step);
+  const input = document.getElementById(ui.input);
+  try { input.focus({ preventScroll: true }); } catch (e) { input.focus(); }
+  input.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+}
+
+// Coming back to a charge step: show the search again, nothing selected
+function resetChargeUI(step) {
+  const ui = CHARGE_UI[step];
+  if (!ui) return;
+  document.getElementById(ui.box).style.display = 'none';
+  renderSearchResults(step);
+}
+
+function setCantFind(step) {
+  S.cantFind = true;
+  S.selectedCharge = null;
+  S.pendingOutcome = 'contact';
+  S.outcomeReason = 'unknown_category';
+  // Clear any selected charge box
+  const box = document.getElementById(CHARGE_UI[step].box);
+  if (box) box.style.display = 'none';
+  // Route to description step before contact
+  go('cant_find');
+}
+
+// ── SENTENCE DATE PREVIEW ────────────────────────────────────────────────────
+function updateWaitPreview() {
+  if (currentStep !== 'sentence_date') return;
+  const w = S.convictionType ? WAIT[S.convictionType] : null;
+  const dateVal = completionISO();
+  const unsure = document.getElementById('completionUnsure').checked;
+  const preview = document.getElementById('waitPreview');
+  if (!w || unsure || !dateVal) { preview.style.display = 'none'; return; }
+  const completed = new Date(dateVal);
+  const eligible = new Date(completed);
+  eligible.setFullYear(eligible.getFullYear() + w.years);
+  const now = new Date();
+  if (now >= eligible) {
+    preview.style.display = 'block';
+    preview.innerHTML = w.years === 0
+      ? `<span style="color:var(--flag-green);">✓ There is no waiting period for this charge once your sentence is complete.</span>`
+      : `<span style="color:var(--flag-green);">✓ Your ${w.years}-year waiting period has passed. You may be eligible to file now.</span>`;
+  } else {
+    preview.style.display = 'block';
+    preview.innerHTML = `Your ${w.years}-year waiting period ends around <strong>${fmtDate(eligible)}</strong>.`;
+  }
+}
+
+// ── EVENTS ───────────────────────────────────────────────────────────────────
+// Current location: show Country only for people outside the U.S.
+document.getElementById('currentState').addEventListener('change', function () {
+  const abroad = this.value === 'Outside the U.S.';
+  document.getElementById('countryWrap').hidden = !abroad;
+  document.getElementById('currentCity').placeholder = abroad ? 'e.g. Toronto' : 'e.g. Sparks';
+  const ph = document.getElementById('phone');
+  ph.placeholder = abroad ? '+44 20 7946 0958' : '(775) 555-1234';
+  ph.maxLength = abroad ? 20 : 16;
+  document.getElementById('phoneHelp').textContent = abroad
+    ? 'Include your country code, e.g. +44 20 7946 0958'
+    : '10-digit U.S. number, e.g. (775) 555-1234';
+});
+
+// Phone: format as (775) 555-1234 while typing
+document.getElementById('phone').addEventListener('input', function () {
+  if (document.getElementById('currentState').value === 'Outside the U.S.') {
+    this.value = this.value.replace(/[^\d+\s()-]/g, '').slice(0, 20); return;
+  }
+  let d = this.value.replace(/\D/g, '');
+  if (d.length === 11 && d[0] === '1') d = d.slice(1);
+  d = d.slice(0, 10);
+  if (d.length > 6)      this.value = `(${d.slice(0,3)}) ${d.slice(3,6)}-${d.slice(6)}`;
+  else if (d.length > 3) this.value = `(${d.slice(0,3)}) ${d.slice(3)}`;
+  else                   this.value = d;
+});
+
+
+document.getElementById('nextBtn').addEventListener('click', advance);
+document.getElementById('backBtn').addEventListener('click', goBack);
+
+// Charge search — typing
+Object.keys(CHARGE_UI).forEach(step => {
+  document.getElementById(CHARGE_UI[step].input).addEventListener('input', function() {
+    S.selectedCharge = null; S.cantFind = false;
+    document.getElementById(CHARGE_UI[step].box).style.display = 'none';
+    renderSearchResults(step);
+  });
+});
+
+// Charge search — clicking a result, "Show all", or "Change" (event delegation)
+document.addEventListener('click', e => {
+  const result = e.target.closest('.search-result');
+  if (result) { selectCharge(result.dataset.chargeStep, decodeURIComponent(result.dataset.charge)); return; }
+  const more = e.target.closest('.show-more');
+  if (more) { renderSearchResults(more.dataset.chargeStep, true); return; }
+  const change = e.target.closest('.sc-change');
+  if (change) changeCharge(change.dataset.chargeStep);
+});
+
+document.addEventListener('change', e => {
+  if (e.target.matches('.option input[type=radio]')) {
+    const group = e.target.closest('.options');
+    group.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+    e.target.closest('.option').classList.add('selected');
+  }
+  if (e.target.id === 'convictionUnsure') {
+    ['convictionMonth', 'convictionYear'].forEach(id => document.getElementById(id).disabled = e.target.checked);
+  }
+  if (e.target.id === 'completionUnsure') {
+    ['completionMonth', 'completionYear'].forEach(id => document.getElementById(id).disabled = e.target.checked);
+    updateWaitPreview();
+  }
+  if (e.target.id === 'completionMonth' || e.target.id === 'completionYear') updateWaitPreview();
+});
+
+// Nav hamburger
+document.querySelector('.hamburger').addEventListener('click', function() {
+  this.classList.toggle('open');
+  this.setAttribute('aria-expanded', this.classList.contains('open'));
+  document.querySelector('.nav-links').classList.toggle('open');
+});
+
+// Init
+render();
+</script>
+</body>
+</html>
