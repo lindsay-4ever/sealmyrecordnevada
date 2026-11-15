@@ -1,6 +1,6 @@
 // Google Tag Manager for nevadasealingrecords.com, loaded from this site's own file.
 // This site has its own container, separate from Las Vegas (GTM-57JJNV39 must
-// never be used here). Until the new container ID is filled in below, nothing loads.
+// never be used here).
 //
 // Rules for what goes through Tag Manager (see the Las Vegas repo's supabase/SETUP.md, "Tracking"):
 // Google and Meta may receive page views and the "form_started" and
@@ -15,4 +15,4 @@
   s.async = true;
   s.src = 'https://www.googletagmanager.com/gtm.js?id=' + id;
   d.head.appendChild(s);
-})(window, document, ''); // TODO: put the new Nevada Sealing Records container ID here, e.g. 'GTM-ABC1234'
+})(window, document, 'GTM-NQSG7GJG');
